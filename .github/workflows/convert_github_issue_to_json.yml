@@ -5,6 +5,9 @@ on:
     types: [opened, edited]
   workflow_dispatch:
 
+permissions:
+  contents: write  # 👈 REQUIRED to allow push from github-actions bot
+
 jobs:
   convert:
     runs-on: ubuntu-latest

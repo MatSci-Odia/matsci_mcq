@@ -31,18 +31,23 @@ except json.JSONDecodeError as e:
     print("❌ Failed to parse MCQ JSON array:", e)
     exit(1)
 
-# Extract filename and normalize
+# Extract file name
 file_name_match = re.search(r"File Name:(.*?)\n", body)
-file_name = file_name_match.group(1).strip() if file_name_match else "mcq_test.docx"
+raw_file_name = file_name_match.group(1).strip() if file_name_match else ""
 
-# Extract title (optional use, not needed for saving)
-title_match = re.search(r"Test Title:(.*?)\n", body)
-test_title = title_match.group(1).strip() if title_match else "MCQ Test"
+# Use default if empty or just extension
+if not raw_file_name or raw_file_name.startswith("."):
+    file_name = "mcq_test.json"
+else:
+    file_name = raw_file_name.replace(".docx", ".json")
 
-# Write the MCQ JSON to a file
+# Ensure folder exists
 os.makedirs("resources", exist_ok=True)
-output_path = os.path.join("resources", file_name.replace(".docx", ".json"))
 
+# Construct full output path
+output_path = os.path.join("resources", file_name)
+
+# Write MCQ JSON data
 with open(output_path, "w") as out_file:
     json.dump(mcq_data, out_file, indent=2)
 
