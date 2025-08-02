@@ -1,41 +1,63 @@
-name: "📝 Add Questions Dynamically"
-description: Submit multiple quiz questions to be added to the test.
-title: "Add Questions - [Your Topic]"
+name: "📝 Add New MCQ Test"
+description: Submit a new MCQ test with title, file name, and list of questions.
+title: "Add MCQ Test - [Test Name]"
 labels: ["question", "pending"]
-assignees:
-  - your-github-username
 body:
-  - type: textarea
-    id: questions
+  - type: input
+    id: title
     attributes:
-      label: Questions JSON
+      label: Test Title
       description: |
-        Paste the questions as a JSON array. Example:
+        Title of the test (e.g., "Class 11 Prog Fundamentals")
+      placeholder: "Class 11 Prog Fundamentals"
+    validations:
+      required: true
+
+  - type: input
+    id: file_name
+    attributes:
+      label: File Name
+      description: |
+        Output `.docx` file name (e.g., `Class_11_Prog_Fundamentals.docx`).
+        Avoid spaces and use underscores.
+      placeholder: "Class_11_Prog_Fundamentals.docx"
+    validations:
+      required: true
+
+  - type: textarea
+    id: mcq_data
+    attributes:
+      label: Questions JSON Array
+      description: |
+        Paste all MCQ questions in a **valid JSON array** (without wrapping in `{}`).
+        Example:
         ```json
         [
           {
-            "question": "Which language is known as the mother of all languages?",
-            "options": ["Latin", "Sanskrit", "Greek", "Arabic"],
+            "question": "Which is a valid loop in Java?",
+            "options": ["if", "while", "case", "goto"],
             "correct": 2,
-            "solution": "Sanskrit is considered one of the oldest languages."
+            "solution": "'while' is used to loop in Java."
           },
           {
-            "question": "What is 2 + 2?",
-            "options": ["3", "4", "5", "6"],
-            "correct": 1,
-            "solution": "Basic addition."
+            "question": "What is the output of 2+2?",
+            "options": ["3", "4", "5", "22"],
+            "correct": 2,
+            "solution": "2 + 2 = 4"
           }
         ]
         ```
+        ✅ `correct` must be 1-based index.
+        ✅ Ensure valid JSON (use tools like https://jsonlint.com).
       placeholder: |
         [
           {
-            "question": "...",
-            "options": ["...", "...", "...", "..."],
-            "correct": 0,
-            "solution": "..."
+            "question": "Your question here",
+            "options": ["A", "B", "C", "D"],
+            "correct": 1,
+            "solution": "Explain answer here"
           }
         ]
-      render: bash
+      render: json
     validations:
       required: true
