@@ -23,7 +23,8 @@ jobs:
 
     - name: Parse Issue and Convert to JSON
       run: |
-        echo "${{ toJSON(github.event.issue) }}" > issue.json
+        echo '${{ toJson(github.event.issue) }}' > issue.json
+        cat issue.json
         python .github/scripts/convert_github_issue_to_json.py
 
     - name: Commit the new question file
