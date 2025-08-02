@@ -1,4 +1,4 @@
-name: "📝 Add New Questions"
+name: "📝 Add Questions Dynamically"
 description: Submit multiple quiz questions to be added to the test.
 title: "Add Questions - [Your Topic]"
 labels: ["question", "pending"]
