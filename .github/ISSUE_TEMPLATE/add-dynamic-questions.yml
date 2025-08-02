@@ -1,0 +1,41 @@
+name: "📝 Add New Questions"
+description: Submit multiple quiz questions to be added to the test.
+title: "Add Questions - [Your Topic]"
+labels: ["question", "pending"]
+assignees:
+  - your-github-username
+body:
+  - type: textarea
+    id: questions
+    attributes:
+      label: Questions JSON
+      description: |
+        Paste the questions as a JSON array. Example:
+        ```json
+        [
+          {
+            "question": "Which language is known as the mother of all languages?",
+            "options": ["Latin", "Sanskrit", "Greek", "Arabic"],
+            "correct": 2,
+            "solution": "Sanskrit is considered one of the oldest languages."
+          },
+          {
+            "question": "What is 2 + 2?",
+            "options": ["3", "4", "5", "6"],
+            "correct": 1,
+            "solution": "Basic addition."
+          }
+        ]
+        ```
+      placeholder: |
+        [
+          {
+            "question": "...",
+            "options": ["...", "...", "...", "..."],
+            "correct": 0,
+            "solution": "..."
+          }
+        ]
+      render: bash
+    validations:
+      required: true
