@@ -29,7 +29,6 @@ jobs:
 
       - name: Lint with flake8
         run: |
-          # Treat all errors as warnings and don't fail build
           flake8 . --exit-zero
 
       - name: Run matsci_mcq.py and generate document
@@ -46,9 +45,14 @@ jobs:
         uses: actions/github-script@v7
         with:
           script: |
+            const runId = process.env.GITHUB_RUN_ID;
+            const repoOwner = context.repo.owner;
+            const repoName = context.repo.repo;
+            const artifactUrl = `https://github.com/${repoOwner}/${repoName}/actions/runs/${runId}`;
+
             github.rest.issues.create({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              title: "MCQ Document Generated",
-              body: "A new MCQ document was generated. [Download it from the Actions artifacts](https://github.com/${context.repo.owner}/${context.repo.repo}/actions/runs/${{ github.run_id }})"
-            })
+              owner: repoOwner,
+              repo: repoName,
+              title: "📝 MCQ Document Generated",
+              body: `A new MCQ document was generated and uploaded as an artifact.\n\n🔗 [Download the document here](${artifactUrl})\n\n⚙️ Triggered by: @${context.actor}`
+            });
