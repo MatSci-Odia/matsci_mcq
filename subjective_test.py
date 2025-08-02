@@ -1,0 +1,27 @@
+# -*- coding: utf-8 -*-
+from docx import Document
+from docx2pdf import convert
+
+# Create the document
+doc = Document()
+doc.add_heading("Subjective Questions – Java (Variables, Data Types, Constants)", level=1)
+
+# Define the questions
+questions = [
+    "Define a variable in Java. How is a variable declared and initialized? Provide an example.",
+    "What are the different types of data types in Java? Explain primitive and non-primitive data types with examples.",
+    "Explain the role and importance of constants in Java. How do you declare a constant? Provide syntax and example.",
+    "Write a Java program to declare variables of all primitive data types and print their default values.",
+    "Differentiate between int, float, and double data types in Java. In what scenarios would you use each?",
+    "Why is the final keyword used in Java? Illustrate its use with a program example.",
+    "What are the rules for naming variables in Java? List at least five valid and invalid variable names.",
+    "How does Java handle type conversion between different data types? Explain implicit and explicit casting with examples.",
+    "Write a program in Java to calculate the area of a circle. Use final to define the value of π (pi).",
+    "Explain the difference between local, instance, and class variables in Java. Provide an example program showing all three."
+]
+
+for i, q in enumerate(questions, 1):
+    doc.add_paragraph(f"{i}. {q}")
+
+doc.save("Class11_Java_Subjective_Questions.docx")
+convert("Class11_Java_Subjective_Questions.docx", "Class11_Java_Subjective_Questions.pdf")
