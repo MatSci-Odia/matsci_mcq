@@ -1,0 +1,58 @@
+name: Add New Question
+description: Submit a new MCQ or Subjective question for the test
+title: "[Question]: "
+labels: ["question"]
+body:
+  - type: dropdown
+    id: question_type
+    attributes:
+      label: Type of Question
+      description: Is this a Multiple Choice Question or Subjective?
+      options:
+        - MCQ
+        - Subjective
+    validations:
+      required: true
+
+  - type: input
+    id: title
+    attributes:
+      label: Title (Filename)
+      description: Enter the topic or filename for this set (e.g., java_basics)
+      placeholder: java_basics
+    validations:
+      required: true
+
+  - type: textarea
+    id: question
+    attributes:
+      label: Question
+      description: Write the question here.
+      placeholder: "Which of the following is a valid variable name in Java?"
+    validations:
+      required: true
+
+  - type: textarea
+    id: options
+    attributes:
+      label: Options (Only for MCQ)
+      description: List 4 options, each on a new line (Only for MCQ)
+      placeholder: |
+        2value
+        value$
+        int
+        void
+
+  - type: input
+    id: correct
+    attributes:
+      label: Correct Option Number (1 to 4)
+      description: Which option number is correct? (Only for MCQ)
+      placeholder: 2
+
+  - type: textarea
+    id: solution
+    attributes:
+      label: Solution / Explanation (Optional)
+      description: Why is the selected answer correct?
+
