@@ -57,6 +57,7 @@ jobs:
           retention-days: 7
 
       - name: Create GitHub issue with artifact info
+        if: success() && github.event.inputs.input_file != '' && (hashFiles('*.docx') != '')
         uses: actions/github-script@v7
         with:
           script: |
