@@ -1,32 +1,35 @@
-# -*- coding: utf-8 -*-
 import json
-import sys
-from pathlib import Path
+import os
+import re
 
-with open(sys.argv[1], 'r') as f:
-    event = json.load(f)
+with open("issue.json", "r") as f:
+    issue = json.load(f)
 
-issue = event["issue"]
 title = issue["title"]
 body = issue["body"]
 
-# Simple parser to split question and options (you can improve this logic)
-lines = body.strip().split("\n")
-question = lines[0]
-options = [line.strip("- ").strip() for line in lines[1:5]]
-correct = int(lines[5].split(":")[1].strip())
-solution = lines[6].split(":")[1].strip()
+def extract(field):
+    match = re.search(f"{field}:(.*?)\n", body + "\n", re.DOTALL)
+    return match.group(1).strip() if match else ""
 
-data = {
+question_type = extract("Type of Question")
+question = extract("Question")
+options = extract("Options").splitlines()
+correct = extract("Correct Option Number")
+solution = extract("Solution")
+file_title = extract("Title (Filename)").replace(" ", "_").lower()
+
+output = {
+    "type": question_type,
     "question": question,
-    "options": options,
-    "correct": correct,
-    "solution": solution
+    "options": options if question_type == "MCQ" else [],
+    "answer": int(correct) if correct.isdigit() else None,
+    "solution": solution,
 }
 
-out_path = Path("resources") / f"{title.lower().replace(' ', '_')}.json"
-out_path.parent.mkdir(exist_ok=True)
-with open(out_path, "w") as out:
-    json.dump([data], out, indent=2)
+# Save to file
+os.makedirs("resources", exist_ok=True)
+with open(f"resources/{file_title}.json", "w") as out_file:
+    json.dump(output, out_file, indent=2)
 
-print(f"Saved question to {out_path}")
+print(f"✅ Question saved to resources/{file_title}.json")

@@ -1,33 +1,36 @@
-name: Create Question JSON from Issue
+name: Convert Issue to Question File
 
 on:
   issues:
     types: [opened, edited]
+  workflow_dispatch:
 
 jobs:
-  convert-issue-to-json:
+  convert:
     if: github.ref == 'refs/heads/test'
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
+    - name: Checkout Code
+      uses: actions/checkout@v4
 
-      - name: Set up Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: '3.11'
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.x'
 
-      - name: Write issue event to file
-        run: echo '${{ toJson(github.event) }}' > issue.json
+    - name: Install dependencies
+      run: pip install PyYAML
 
-      - name: Run script to convert issue to JSON
-        run: python .github/scripts/convert_github_issue_to_json.py issue.json
+    - name: Parse Issue and Convert to JSON
+      run: |
+        echo "${{ toJSON(github.event.issue) }}" > issue.json
+        python .github/scripts/convert_github_issue_to_json.py
 
-      - name: Commit and push generated file
-        run: |
-          git config user.name "github-actions"
-          git config user.email "github-actions@github.com"
-          git add resources/
-          git commit -m "📄 Add question from issue: ${{ github.event.issue.title }}" || echo "Nothing to commit"
-          git push origin test
+    - name: Commit the new question file
+      run: |
+        git config user.name "github-actions"
+        git config user.email "github-actions@github.com"
+        git add resources/
+        git commit -m "Added question from issue #${{ github.event.issue.number }}"
+        git push origin test
