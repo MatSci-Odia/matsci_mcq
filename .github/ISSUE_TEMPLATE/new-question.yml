@@ -1,58 +1,64 @@
-name: Add New Question
-description: Submit a new MCQ or Subjective question for the test
+name: "Add New Question"
+description: "Submit a new question to be added to the test."
 title: "[Question]: "
-labels: ["question"]
+labels: ["question", "auto-generate"]
+assignees: []
+
 body:
-  - type: dropdown
-    id: question_type
+  - type: input
+    id: title
     attributes:
-      label: Type of Question
-      description: Is this a Multiple Choice Question or Subjective?
-      options:
-        - MCQ
-        - Subjective
+      label: "Test Title"
+      description: "Title of the test (e.g., 'Java Basics', 'Python Functions')"
+      placeholder: "Enter the test title"
     validations:
       required: true
 
   - type: input
-    id: title
+    id: file_name
     attributes:
-      label: Title (Filename)
-      description: Enter the topic or filename for this set (e.g., java_basics)
-      placeholder: java_basics
+      label: "File Name"
+      description: "File to which this question belongs (e.g., java_test.json)"
+      placeholder: "test_name.json"
     validations:
       required: true
 
   - type: textarea
     id: question
     attributes:
-      label: Question
-      description: Write the question here.
-      placeholder: "Which of the following is a valid variable name in Java?"
+      label: "Question"
+      description: "Enter the question text"
+      placeholder: "What is the output of print(2 + 3 * 4)?"
     validations:
       required: true
 
   - type: textarea
     id: options
     attributes:
-      label: Options (Only for MCQ)
-      description: List 4 options, each on a new line (Only for MCQ)
+      label: "Options"
+      description: "List 4 options, one per line"
       placeholder: |
-        2value
-        value$
-        int
-        void
+        14
+        20
+        24
+        12
+    validations:
+      required: true
 
   - type: input
     id: correct
     attributes:
-      label: Correct Option Number (1 to 4)
-      description: Which option number is correct? (Only for MCQ)
-      placeholder: 2
+      label: "Correct Option Number"
+      description: "Enter 1 for the first option, 2 for second, etc."
+      placeholder: "1"
+    validations:
+      required: true
 
   - type: textarea
     id: solution
     attributes:
-      label: Solution / Explanation (Optional)
-      description: Why is the selected answer correct?
-
+      label: "Solution"
+      description: "Explain why this answer is correct."
+      placeholder: "Multiplication has higher precedence, so 3*4=12, then 2+12=14."
+    validations:
+      required: true
