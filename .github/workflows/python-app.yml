@@ -7,6 +7,14 @@ on:
     branches: [ "test" ]
   workflow_dispatch:
     inputs:
+      script:
+        description: 'Select script to run'
+        required: true
+        default: 'matsci_mcq.py'
+        type: choice
+        options:
+          - matsci_mcq.py
+          - subjective_test.py
       input_file:
         description: 'Path to input JSON (e.g., resources/programming_fundamentals.json)'
         required: true
@@ -37,9 +45,9 @@ jobs:
         run: |
           flake8 . --exit-zero
 
-      - name: Run matsci_mcq.py and generate document
+      - name: Run selected script and generate document
         run: |
-          python3 matsci_mcq.py ${{ github.event.inputs.input_file }}
+          python3 ${{ github.event.inputs.script }} ${{ github.event.inputs.input_file }}
 
       - name: Upload .docx as artifact
         uses: actions/upload-artifact@v4
@@ -60,6 +68,6 @@ jobs:
             github.rest.issues.create({
               owner: repoOwner,
               repo: repoName,
-              title: "📝 MCQ Document Generated",
-              body: `A new MCQ document was generated from the input file \`${{ github.event.inputs.input_file }}\`.\n\n🔗 [Download the document here](${artifactUrl})\n\n⚙️ Triggered by: @${context.actor}`
+              title: "📝 Document Generated",
+              body: `A new document was generated using \`${{ github.event.inputs.script }}\` and input file \`${{ github.event.inputs.input_file }}\`.\n\n🔗 [Download the document here](${artifactUrl})\n\n⚙️ Triggered by: @${context.actor}`
             });
