@@ -1,27 +1,37 @@
 # -*- coding: utf-8 -*-
+import sys
+import json
 from docx import Document
 from docx2pdf import convert
 
-# Create the document
-doc = Document()
-doc.add_heading("Subjective Questions – Java (Variables, Data Types, Constants)", level=1)
 
-# Define the questions
-questions = [
-    "Define a variable in Java. How is a variable declared and initialized? Provide an example.",
-    "What are the different types of data types in Java? Explain primitive and non-primitive data types with examples.",
-    "Explain the role and importance of constants in Java. How do you declare a constant? Provide syntax and example.",
-    "Write a Java program to declare variables of all primitive data types and print their default values.",
-    "Differentiate between int, float, and double data types in Java. In what scenarios would you use each?",
-    "Why is the final keyword used in Java? Illustrate its use with a program example.",
-    "What are the rules for naming variables in Java? List at least five valid and invalid variable names.",
-    "How does Java handle type conversion between different data types? Explain implicit and explicit casting with examples.",
-    "Write a program in Java to calculate the area of a circle. Use final to define the value of π (pi).",
-    "Explain the difference between local, instance, and class variables in Java. Provide an example program showing all three."
-]
+def main(input_json):
+    # Load data
+    with open(input_json, 'r', encoding='utf-8') as f:
+        data = json.load(f)
 
-for i, q in enumerate(questions, 1):
-    doc.add_paragraph(f"{i}. {q}")
+    heading = data['heading']
+    questions = data['questions']
+    output_filename = data.get('output_filename', 'Questions')
 
-doc.save("Class11_Java_Subjective_Questions.docx")
-convert("Class11_Java_Subjective_Questions.docx", "Class11_Java_Subjective_Questions.pdf")
+    # Generate DOCX
+    doc = Document()
+    doc.add_heading(heading, level=1)
+
+    for i, q in enumerate(questions, 1):
+        doc.add_paragraph(f"{i}. {q}")
+
+    docx_file = f"{output_filename}.docx"
+    pdf_file = f"{output_filename}.pdf"
+    doc.save(docx_file)
+
+    # Convert to PDF
+    convert(docx_file, pdf_file)
+    print(f"Generated: {docx_file} and {pdf_file}")
+
+
+if __name__ == "__main__":
+    if len(sys.argv) < 2:
+        print("Usage: python generate_questions.py resources/filename.json")
+    else:
+        main(sys.argv[1])

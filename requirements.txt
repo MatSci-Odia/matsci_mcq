@@ -4,3 +4,4 @@ typing_extensions==4.14.1
 flake8
 black
 isort
+docx2pdf
