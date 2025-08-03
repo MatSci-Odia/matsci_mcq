@@ -1,0 +1,31 @@
+{
+  "title": "Class 11 Physics MCQ",
+  "file_name": "Class_11_Physics.docx",
+  "mcq_data": [
+    {
+      "question": "What is 2+2",
+      "options": [
+        "1",
+        "2$",
+        "4",
+        "6"
+      ],
+      "correct": 3,
+      "solution": "2+2 = 4."
+    },
+    {
+      "question": "What is 2+3",
+      "options": [
+        "1",
+        "5",
+        "4",
+        "6"
+      ],
+      "correct": 2,
+      "solution": "2+2 = 4."
+    }
+    
+  ]
+    
+    
+}
