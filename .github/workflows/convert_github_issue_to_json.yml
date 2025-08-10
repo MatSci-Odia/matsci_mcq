@@ -33,11 +33,11 @@ jobs:
         echo '${{ toJson(github.event.issue) }}' > issue.json
         cat issue.json
         file_name=$(python .github/scripts/convert_github_issue_to_json.py)
-        echo "file_name=$file_name" >> $GITHUB_OUTPUT
+        echo "file_name=$file_name" >> "$GITHUB_OUTPUT"
 
     - name: Run selected script and generate document
       run: |
-        python3 matsci_mcq.py "${{ steps.convert.outputs.file_name }}"
+        python matsci_mcq.py "${{ steps.convert.outputs.file_name }}"
 
     - name: Upload .docx as artifact
       uses: actions/upload-artifact@v4
