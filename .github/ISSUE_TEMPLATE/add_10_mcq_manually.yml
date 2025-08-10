@@ -1,6 +1,6 @@
 name: 📝 Add MCQ Test
 description: Submit a test with multiple-choice questions.
-title: "Add MCQ Test - [Your Test Title]"
+title: "[Your Test Title]"
 labels: [question, pending]
 
 body:
@@ -10,14 +10,6 @@ body:
       label: File Name
       description: "Output `.docx` file name (e.g., `Class_11_Prog_Fundamentals.docx`). Use underscores instead of spaces."
       placeholder: Class_11_Prog_Fundamentals.docx
-    validations:
-      required: true
-
-  - type: input
-    id: test_title
-    attributes:
-      label: Test Title
-      placeholder: "Class 11 Programming Fundamentals"
     validations:
       required: true
 
@@ -33,7 +25,7 @@ body:
   - type: input
     id: option_1_1
     attributes:
-      label: Option 1 for Question 1
+      label: Option 1
       placeholder: "Enter option 1"
     validations:
       required: true
@@ -41,7 +33,7 @@ body:
   - type: input
     id: option_1_2
     attributes:
-      label: Option 2 for Question 1
+      label: Option 2
       placeholder: "Enter option 2"
     validations:
       required: true
@@ -49,7 +41,7 @@ body:
   - type: input
     id: option_1_3
     attributes:
-      label: Option 3 for Question 1
+      label: Option 3
       placeholder: "Enter option 3"
     validations:
       required: true
@@ -57,7 +49,7 @@ body:
   - type: input
     id: option_1_4
     attributes:
-      label: Option 4 for Question 1
+      label: Option 4
       placeholder: "Enter option 4"
     validations:
       required: true
@@ -65,7 +57,7 @@ body:
   - type: dropdown
     id: correct_1
     attributes:
-      label: Correct Option for Question 1
+      label: Correct Option
       description: "Select the correct option number (1-4)"
       options:
         - 1
@@ -78,7 +70,7 @@ body:
   - type: textarea
     id: solution_1
     attributes:
-      label: Solution for Question 1
+      label: Solution
       placeholder: "Enter the explanation or solution for the correct answer"
     validations:
       required: true
@@ -95,7 +87,7 @@ body:
   - type: input
     id: option_2_1
     attributes:
-      label: Option 1 for Question 2
+      label: Option 1
       placeholder: "Enter option 1"
     validations:
       required: true
@@ -103,7 +95,7 @@ body:
   - type: input
     id: option_2_2
     attributes:
-      label: Option 2 for Question 2
+      label: Option 2
       placeholder: "Enter option 2"
     validations:
       required: true
@@ -111,7 +103,7 @@ body:
   - type: input
     id: option_2_3
     attributes:
-      label: Option 3 for Question 2
+      label: Option 3
       placeholder: "Enter option 3"
     validations:
       required: true
@@ -119,7 +111,7 @@ body:
   - type: input
     id: option_2_4
     attributes:
-      label: Option 4 for Question 2
+      label: Option 4
       placeholder: "Enter option 4"
     validations:
       required: true
@@ -127,7 +119,7 @@ body:
   - type: dropdown
     id: correct_2
     attributes:
-      label: Correct Option for Question 2
+      label: Correct Option
       description: "Select the correct option number (1-4)"
       options:
         - 1
@@ -140,7 +132,7 @@ body:
   - type: textarea
     id: solution_2
     attributes:
-      label: Solution for Question 2
+      label: Solution
       placeholder: "Enter the explanation or solution for the correct answer"
     validations:
       required: true
@@ -157,7 +149,7 @@ body:
   - type: input
     id: option_3_1
     attributes:
-      label: Option 1 for Question 3
+      label: Option 1
       placeholder: "Enter option 1"
     validations:
       required: true
@@ -165,7 +157,7 @@ body:
   - type: input
     id: option_3_2
     attributes:
-      label: Option 2 for Question 3
+      label: Option 2
       placeholder: "Enter option 2"
     validations:
       required: true
@@ -173,7 +165,7 @@ body:
   - type: input
     id: option_3_3
     attributes:
-      label: Option 3 for Question 3
+      label: Option 3
       placeholder: "Enter option 3"
     validations:
       required: true
@@ -181,7 +173,7 @@ body:
   - type: input
     id: option_3_4
     attributes:
-      label: Option 4 for Question 3
+      label: Option 4
       placeholder: "Enter option 4"
     validations:
       required: true
@@ -189,7 +181,7 @@ body:
   - type: dropdown
     id: correct_3
     attributes:
-      label: Correct Option for Question 3
+      label: Correct Option
       description: "Select the correct option number (1-4)"
       options:
         - 1
@@ -202,7 +194,7 @@ body:
   - type: textarea
     id: solution_3
     attributes:
-      label: Solution for Question 3
+      label: Solution
       placeholder: "Enter the explanation or solution for the correct answer"
     validations:
       required: true
