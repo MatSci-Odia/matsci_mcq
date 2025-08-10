@@ -1,635 +1,634 @@
-Uncomment this file to test
-#name: 📝 Add MCQ Test
-#description: Submit a test with multiple-choice questions.
-#title: "[Your Test Title]"
-#labels: [ question, pending ]
-#
-#body:
-#  - type: input
-#    id: file_name
-#    attributes:
-#      label: File Name
-#      description: "Output `.docx` file name (e.g., `Class_11_Prog_Fundamentals.docx`). Use underscores instead of spaces."
-#      placeholder: Class_11_Prog_Fundamentals.docx
-#    validations:
-#      required: true
-#
-#  # Question 1
-#  - type: input
-#    id: question_1
-#    attributes:
-#      label: Question 1
-#      placeholder: "Enter the question text"
-#    validations:
-#      required: true
-#
-#  - type: input
-#    id: option_1_1
-#    attributes:
-#      label: Option 1
-#      placeholder: "Enter option 1"
-#    validations:
-#      required: true
-#
-#  - type: input
-#    id: option_1_2
-#    attributes:
-#      label: Option 2
-#      placeholder: "Enter option 2"
-#    validations:
-#      required: true
-#
-#  - type: input
-#    id: option_1_3
-#    attributes:
-#      label: Option 3
-#      placeholder: "Enter option 3"
-#    validations:
-#      required: true
-#
-#  - type: input
-#    id: option_1_4
-#    attributes:
-#      label: Option 4
-#      placeholder: "Enter option 4"
-#    validations:
-#      required: true
-#
-#  - type: dropdown
-#    id: correct_1
-#    attributes:
-#      label: Correct Option
-#      description: "Select the correct option number (1-4)"
-#      options:
-#        - 1
-#        - 2
-#        - 3
-#        - 4
-#    validations:
-#      required: true
-#
-#  - type: textarea
-#    id: solution_1
-#    attributes:
-#      label: Solution
-#      placeholder: "Enter the explanation or solution for the correct answer"
-#    validations:
-#      required: true
-#
-#  # Question 2
-#  - type: input
-#    id: question_2
-#    attributes:
-#      label: Question 2
-#      placeholder: "Enter the question text"
-#    validations:
-#      required: true
-#
-#  - type: input
-#    id: option_2_1
-#    attributes:
-#      label: Option 1
-#      placeholder: "Enter option 1"
-#    validations:
-#      required: true
-#
-#  - type: input
-#    id: option_2_2
-#    attributes:
-#      label: Option 2
-#      placeholder: "Enter option 2"
-#    validations:
-#      required: true
-#
-#  - type: input
-#    id: option_2_3
-#    attributes:
-#      label: Option 3
-#      placeholder: "Enter option 3"
-#    validations:
-#      required: true
-#
-#  - type: input
-#    id: option_2_4
-#    attributes:
-#      label: Option 4
-#      placeholder: "Enter option 4"
-#    validations:
-#      required: true
-#
-#  - type: dropdown
-#    id: correct_2
-#    attributes:
-#      label: Correct Option
-#      description: "Select the correct option number (1-4)"
-#      options:
-#        - 1
-#        - 2
-#        - 3
-#        - 4
-#    validations:
-#      required: true
-#
-#  - type: textarea
-#    id: solution_2
-#    attributes:
-#      label: Solution
-#      placeholder: "Enter the explanation or solution for the correct answer"
-#    validations:
-#      required: true
-#
-#  # Question 3
-#  - type: input
-#    id: question_3
-#    attributes:
-#      label: Question 3
-#      placeholder: "Enter the question text"
-#    validations:
-#      required: true
-#
-#  - type: input
-#    id: option_3_1
-#    attributes:
-#      label: Option 1
-#      placeholder: "Enter option 1"
-#    validations:
-#      required: true
-#
-#  - type: input
-#    id: option_3_2
-#    attributes:
-#      label: Option 2
-#      placeholder: "Enter option 2"
-#    validations:
-#      required: true
-#
-#  - type: input
-#    id: option_3_3
-#    attributes:
-#      label: Option 3
-#      placeholder: "Enter option 3"
-#    validations:
-#      required: true
-#
-#  - type: input
-#    id: option_3_4
-#    attributes:
-#      label: Option 4
-#      placeholder: "Enter option 4"
-#    validations:
-#      required: true
-#
-#  - type: dropdown
-#    id: correct_3
-#    attributes:
-#      label: Correct Option
-#      description: "Select the correct option number (1-4)"
-#      options:
-#        - 1
-#        - 2
-#        - 3
-#        - 4
-#    validations:
-#      required: true
-#
-#  - type: textarea
-#    id: solution_3
-#    attributes:
-#      label: Solution
-#      placeholder: "Enter the explanation or solution for the correct answer"
-#    validations:
-#      required: true
-#
-#  # Question 4
-#  - type: input
-#    id: question_4
-#    attributes:
-#      label: Question 4
-#      placeholder: "Enter the question text"
-#    validations:
-#      required: true
-#
-#  - type: input
-#    id: option_4_1
-#    attributes:
-#      label: Option 1
-#      placeholder: "Enter option 1"
-#    validations:
-#      required: true
-#
-#  - type: input
-#    id: option_4_2
-#    attributes:
-#      label: Option 2
-#      placeholder: "Enter option 2"
-#    validations:
-#      required: true
-#
-#  - type: input
-#    id: option_4_3
-#    attributes:
-#      label: Option 3
-#      placeholder: "Enter option 3"
-#    validations:
-#      required: true
-#
-#  - type: input
-#    id: option_4_4
-#    attributes:
-#      label: Option 4
-#      placeholder: "Enter option 4"
-#    validations:
-#      required: true
-#
-#  - type: dropdown
-#    id: correct_4
-#    attributes:
-#      label: Correct Option
-#      description: "Select the correct option number (1-4)"
-#      options:
-#        - 1
-#        - 2
-#        - 3
-#        - 4
-#    validations:
-#      required: true
-#
-#  - type: textarea
-#    id: solution_4
-#    attributes:
-#      label: Solution
-#      placeholder: "Enter the explanation or solution for the correct answer"
-#    validations:
-#      required: true
-#
-#  # Question 5
-#  - type: input
-#    id: question_5
-#    attributes:
-#      label: Question 5
-#      placeholder: "Enter the question text"
-#    validations:
-#      required: true
-#
-#  - type: input
-#    id: option_5_1
-#    attributes:
-#      label: Option 1
-#      placeholder: "Enter option 1"
-#    validations:
-#      required: true
-#
-#  - type: input
-#    id: option_5_2
-#    attributes:
-#      label: Option 2
-#      placeholder: "Enter option 2"
-#    validations:
-#      required: true
-#
-#  - type: input
-#    id: option_5_3
-#    attributes:
-#      label: Option 3
-#      placeholder: "Enter option 3"
-#    validations:
-#      required: true
-#
-#  - type: input
-#    id: option_5_4
-#    attributes:
-#      label: Option 4
-#      placeholder: "Enter option 4"
-#    validations:
-#      required: true
-#
-#  - type: dropdown
-#    id: correct_5
-#    attributes:
-#      label: Correct Option
-#      description: "Select the correct option number (1-4)"
-#      options:
-#        - 1
-#        - 2
-#        - 3
-#        - 4
-#    validations:
-#      required: true
-#
-#  - type: textarea
-#    id: solution_5
-#    attributes:
-#      label: Solution
-#      placeholder: "Enter the explanation or solution for the correct answer"
-#    validations:
-#      required: true
-#
-#  # Question 6
-#  - type: input
-#    id: question_6
-#    attributes:
-#      label: Question 6
-#      placeholder: "Enter the question text"
-#    validations:
-#      required: true
-#
-#  - type: input
-#    id: option_6_1
-#    attributes:
-#      label: Option 1
-#      placeholder: "Enter option 1"
-#    validations:
-#      required: true
-#
-#  - type: input
-#    id: option_6_2
-#    attributes:
-#      label: Option 2
-#      placeholder: "Enter option 2"
-#    validations:
-#      required: true
-#
-#  - type: input
-#    id: option_6_3
-#    attributes:
-#      label: Option 3
-#      placeholder: "Enter option 3"
-#    validations:
-#      required: true
-#
-#  - type: input
-#    id: option_6_4
-#    attributes:
-#      label: Option 4
-#      placeholder: "Enter option 4"
-#    validations:
-#      required: true
-#
-#  - type: dropdown
-#    id: correct_6
-#    attributes:
-#      label: Correct Option
-#      description: "Select the correct option number (1-4)"
-#      options:
-#        - 1
-#        - 2
-#        - 3
-#        - 4
-#    validations:
-#      required: true
-#
-#  - type: textarea
-#    id: solution_6
-#    attributes:
-#      label: Solution
-#      placeholder: "Enter the explanation or solution for the correct answer"
-#    validations:
-#      required: true
-#
-#  # Question 7
-#  - type: input
-#    id: question_7
-#    attributes:
-#      label: Question 7
-#      placeholder: "Enter the question text"
-#    validations:
-#      required: true
-#
-#  - type: input
-#    id: option_7_1
-#    attributes:
-#      label: Option 1
-#      placeholder: "Enter option 1"
-#    validations:
-#      required: true
-#
-#  - type: input
-#    id: option_7_2
-#    attributes:
-#      label: Option 2
-#      placeholder: "Enter option 2"
-#    validations:
-#      required: true
-#
-#  - type: input
-#    id: option_7_3
-#    attributes:
-#      label: Option 3
-#      placeholder: "Enter option 3"
-#    validations:
-#      required: true
-#
-#  - type: input
-#    id: option_7_4
-#    attributes:
-#      label: Option 4
-#      placeholder: "Enter option 4"
-#    validations:
-#      required: true
-#
-#  - type: dropdown
-#    id: correct_7
-#    attributes:
-#      label: Correct Option
-#      description: "Select the correct option number (1-4)"
-#      options:
-#        - 1
-#        - 2
-#        - 3
-#        - 4
-#    validations:
-#      required: true
-#
-#  - type: textarea
-#    id: solution_7
-#    attributes:
-#      label: Solution
-#      placeholder: "Enter the explanation or solution for the correct answer"
-#    validations:
-#      required: true
-#
-#  # Question 8
-#  - type: input
-#    id: question_8
-#    attributes:
-#      label: Question 8
-#      placeholder: "Enter the question text"
-#    validations:
-#      required: true
-#
-#  - type: input
-#    id: option_8_1
-#    attributes:
-#      label: Option 1
-#      placeholder: "Enter option 1"
-#    validations:
-#      required: true
-#
-#  - type: input
-#    id: option_8_2
-#    attributes:
-#      label: Option 2
-#      placeholder: "Enter option 2"
-#    validations:
-#      required: true
-#
-#  - type: input
-#    id: option_8_3
-#    attributes:
-#      label: Option 3
-#      placeholder: "Enter option 3"
-#    validations:
-#      required: true
-#
-#  - type: input
-#    id: option_8_4
-#    attributes:
-#      label: Option 4
-#      placeholder: "Enter option 4"
-#    validations:
-#      required: true
-#
-#  - type: dropdown
-#    id: correct_8
-#    attributes:
-#      label: Correct Option
-#      description: "Select the correct option number (1-4)"
-#      options:
-#        - 1
-#        - 2
-#        - 3
-#        - 4
-#    validations:
-#      required: true
-#
-#  - type: textarea
-#    id: solution_8
-#    attributes:
-#      label: Solution
-#      placeholder: "Enter the explanation or solution for the correct answer"
-#    validations:
-#      required: true
-#
-#  # Question 9
-#  - type: input
-#    id: question_9
-#    attributes:
-#      label: Question 9
-#      placeholder: "Enter the question text"
-#    validations:
-#      required: true
-#
-#  - type: input
-#    id: option_9_1
-#    attributes:
-#      label: Option 1
-#      placeholder: "Enter option 1"
-#    validations:
-#      required: true
-#
-#  - type: input
-#    id: option_9_2
-#    attributes:
-#      label: Option 2
-#      placeholder: "Enter option 2"
-#    validations:
-#      required: true
-#
-#  - type: input
-#    id: option_9_3
-#    attributes:
-#      label: Option 3
-#      placeholder: "Enter option 3"
-#    validations:
-#      required: true
-#
-#  - type: input
-#    id: option_9_4
-#    attributes:
-#      label: Option 4
-#      placeholder: "Enter option 4"
-#    validations:
-#      required: true
-#
-#  - type: dropdown
-#    id: correct_9
-#    attributes:
-#      label: Correct Option
-#      description: "Select the correct option number (1-4)"
-#      options:
-#        - 1
-#        - 2
-#        - 3
-#        - 4
-#    validations:
-#      required: true
-#
-#  - type: textarea
-#    id: solution_9
-#    attributes:
-#      label: Solution
-#      placeholder: "Enter the explanation or solution for the correct answer"
-#    validations:
-#      required: true
-#
-#  # Question 10
-#  - type: input
-#    id: question_10
-#    attributes:
-#      label: Question 10
-#      placeholder: "Enter the question text"
-#    validations:
-#      required: true
-#
-#  - type: input
-#    id: option_10_1
-#    attributes:
-#      label: Option 1
-#      placeholder: "Enter option 1"
-#    validations:
-#      required: true
-#
-#  - type: input
-#    id: option_10_2
-#    attributes:
-#      label: Option 2
-#      placeholder: "Enter option 2"
-#    validations:
-#      required: true
-#
-#  - type: input
-#    id: option_10_3
-#    attributes:
-#      label: Option 3
-#      placeholder: "Enter option 3"
-#    validations:
-#      required: true
-#
-#  - type: input
-#    id: option_10_4
-#    attributes:
-#      label: Option 4
-#      placeholder: "Enter option 4"
-#    validations:
-#      required: true
-#
-#  - type: dropdown
-#    id: correct_10
-#    attributes:
-#      label: Correct Option
-#      description: "Select the correct option number (1-4)"
-#      options:
-#        - 1
-#        - 2
-#        - 3
-#        - 4
-#    validations:
-#      required: true
-#
-#  - type: textarea
-#    id: solution_10
-#    attributes:
-#      label: Solution
-#      placeholder: "Enter the explanation or solution for the correct answer"
-#    validations:
-#      required: true
+name: 📝 Add 10 MCQ Test
+description: Submit a test with multiple-choice questions.
+title: "[Your Test Title]"
+labels: [ question, pending ]
+
+body:
+  - type: input
+    id: file_name
+    attributes:
+      label: File Name
+      description: "Output `.docx` file name (e.g., `Class_11_Prog_Fundamentals.docx`). Use underscores instead of spaces."
+      placeholder: Class_11_Prog_Fundamentals.docx
+    validations:
+      required: true
+
+  # Question 1
+  - type: input
+    id: question_1
+    attributes:
+      label: Question 1
+      placeholder: "Enter the question text"
+    validations:
+      required: true
+
+  - type: input
+    id: option_1_1
+    attributes:
+      label: Option 1
+      placeholder: "Enter option 1"
+    validations:
+      required: true
+
+  - type: input
+    id: option_1_2
+    attributes:
+      label: Option 2
+      placeholder: "Enter option 2"
+    validations:
+      required: true
+
+  - type: input
+    id: option_1_3
+    attributes:
+      label: Option 3
+      placeholder: "Enter option 3"
+    validations:
+      required: true
+
+  - type: input
+    id: option_1_4
+    attributes:
+      label: Option 4
+      placeholder: "Enter option 4"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: correct_1
+    attributes:
+      label: Correct Option
+      description: "Select the correct option number (1-4)"
+      options:
+        - 1
+        - 2
+        - 3
+        - 4
+    validations:
+      required: true
+
+  - type: textarea
+    id: solution_1
+    attributes:
+      label: Solution
+      placeholder: "Enter the explanation or solution for the correct answer"
+    validations:
+      required: true
+
+  # Question 2
+  - type: input
+    id: question_2
+    attributes:
+      label: Question 2
+      placeholder: "Enter the question text"
+    validations:
+      required: true
+
+  - type: input
+    id: option_2_1
+    attributes:
+      label: Option 1
+      placeholder: "Enter option 1"
+    validations:
+      required: true
+
+  - type: input
+    id: option_2_2
+    attributes:
+      label: Option 2
+      placeholder: "Enter option 2"
+    validations:
+      required: true
+
+  - type: input
+    id: option_2_3
+    attributes:
+      label: Option 3
+      placeholder: "Enter option 3"
+    validations:
+      required: true
+
+  - type: input
+    id: option_2_4
+    attributes:
+      label: Option 4
+      placeholder: "Enter option 4"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: correct_2
+    attributes:
+      label: Correct Option
+      description: "Select the correct option number (1-4)"
+      options:
+        - 1
+        - 2
+        - 3
+        - 4
+    validations:
+      required: true
+
+  - type: textarea
+    id: solution_2
+    attributes:
+      label: Solution
+      placeholder: "Enter the explanation or solution for the correct answer"
+    validations:
+      required: true
+
+  # Question 3
+  - type: input
+    id: question_3
+    attributes:
+      label: Question 3
+      placeholder: "Enter the question text"
+    validations:
+      required: true
+
+  - type: input
+    id: option_3_1
+    attributes:
+      label: Option 1
+      placeholder: "Enter option 1"
+    validations:
+      required: true
+
+  - type: input
+    id: option_3_2
+    attributes:
+      label: Option 2
+      placeholder: "Enter option 2"
+    validations:
+      required: true
+
+  - type: input
+    id: option_3_3
+    attributes:
+      label: Option 3
+      placeholder: "Enter option 3"
+    validations:
+      required: true
+
+  - type: input
+    id: option_3_4
+    attributes:
+      label: Option 4
+      placeholder: "Enter option 4"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: correct_3
+    attributes:
+      label: Correct Option
+      description: "Select the correct option number (1-4)"
+      options:
+        - 1
+        - 2
+        - 3
+        - 4
+    validations:
+      required: true
+
+  - type: textarea
+    id: solution_3
+    attributes:
+      label: Solution
+      placeholder: "Enter the explanation or solution for the correct answer"
+    validations:
+      required: true
+
+  # Question 4
+  - type: input
+    id: question_4
+    attributes:
+      label: Question 4
+      placeholder: "Enter the question text"
+    validations:
+      required: true
+
+  - type: input
+    id: option_4_1
+    attributes:
+      label: Option 1
+      placeholder: "Enter option 1"
+    validations:
+      required: true
+
+  - type: input
+    id: option_4_2
+    attributes:
+      label: Option 2
+      placeholder: "Enter option 2"
+    validations:
+      required: true
+
+  - type: input
+    id: option_4_3
+    attributes:
+      label: Option 3
+      placeholder: "Enter option 3"
+    validations:
+      required: true
+
+  - type: input
+    id: option_4_4
+    attributes:
+      label: Option 4
+      placeholder: "Enter option 4"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: correct_4
+    attributes:
+      label: Correct Option
+      description: "Select the correct option number (1-4)"
+      options:
+        - 1
+        - 2
+        - 3
+        - 4
+    validations:
+      required: true
+
+  - type: textarea
+    id: solution_4
+    attributes:
+      label: Solution
+      placeholder: "Enter the explanation or solution for the correct answer"
+    validations:
+      required: true
+
+  # Question 5
+  - type: input
+    id: question_5
+    attributes:
+      label: Question 5
+      placeholder: "Enter the question text"
+    validations:
+      required: true
+
+  - type: input
+    id: option_5_1
+    attributes:
+      label: Option 1
+      placeholder: "Enter option 1"
+    validations:
+      required: true
+
+  - type: input
+    id: option_5_2
+    attributes:
+      label: Option 2
+      placeholder: "Enter option 2"
+    validations:
+      required: true
+
+  - type: input
+    id: option_5_3
+    attributes:
+      label: Option 3
+      placeholder: "Enter option 3"
+    validations:
+      required: true
+
+  - type: input
+    id: option_5_4
+    attributes:
+      label: Option 4
+      placeholder: "Enter option 4"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: correct_5
+    attributes:
+      label: Correct Option
+      description: "Select the correct option number (1-4)"
+      options:
+        - 1
+        - 2
+        - 3
+        - 4
+    validations:
+      required: true
+
+  - type: textarea
+    id: solution_5
+    attributes:
+      label: Solution
+      placeholder: "Enter the explanation or solution for the correct answer"
+    validations:
+      required: true
+
+  # Question 6
+  - type: input
+    id: question_6
+    attributes:
+      label: Question 6
+      placeholder: "Enter the question text"
+    validations:
+      required: true
+
+  - type: input
+    id: option_6_1
+    attributes:
+      label: Option 1
+      placeholder: "Enter option 1"
+    validations:
+      required: true
+
+  - type: input
+    id: option_6_2
+    attributes:
+      label: Option 2
+      placeholder: "Enter option 2"
+    validations:
+      required: true
+
+  - type: input
+    id: option_6_3
+    attributes:
+      label: Option 3
+      placeholder: "Enter option 3"
+    validations:
+      required: true
+
+  - type: input
+    id: option_6_4
+    attributes:
+      label: Option 4
+      placeholder: "Enter option 4"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: correct_6
+    attributes:
+      label: Correct Option
+      description: "Select the correct option number (1-4)"
+      options:
+        - 1
+        - 2
+        - 3
+        - 4
+    validations:
+      required: true
+
+  - type: textarea
+    id: solution_6
+    attributes:
+      label: Solution
+      placeholder: "Enter the explanation or solution for the correct answer"
+    validations:
+      required: true
+
+  # Question 7
+  - type: input
+    id: question_7
+    attributes:
+      label: Question 7
+      placeholder: "Enter the question text"
+    validations:
+      required: true
+
+  - type: input
+    id: option_7_1
+    attributes:
+      label: Option 1
+      placeholder: "Enter option 1"
+    validations:
+      required: true
+
+  - type: input
+    id: option_7_2
+    attributes:
+      label: Option 2
+      placeholder: "Enter option 2"
+    validations:
+      required: true
+
+  - type: input
+    id: option_7_3
+    attributes:
+      label: Option 3
+      placeholder: "Enter option 3"
+    validations:
+      required: true
+
+  - type: input
+    id: option_7_4
+    attributes:
+      label: Option 4
+      placeholder: "Enter option 4"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: correct_7
+    attributes:
+      label: Correct Option
+      description: "Select the correct option number (1-4)"
+      options:
+        - 1
+        - 2
+        - 3
+        - 4
+    validations:
+      required: true
+
+  - type: textarea
+    id: solution_7
+    attributes:
+      label: Solution
+      placeholder: "Enter the explanation or solution for the correct answer"
+    validations:
+      required: true
+
+  # Question 8
+  - type: input
+    id: question_8
+    attributes:
+      label: Question 8
+      placeholder: "Enter the question text"
+    validations:
+      required: true
+
+  - type: input
+    id: option_8_1
+    attributes:
+      label: Option 1
+      placeholder: "Enter option 1"
+    validations:
+      required: true
+
+  - type: input
+    id: option_8_2
+    attributes:
+      label: Option 2
+      placeholder: "Enter option 2"
+    validations:
+      required: true
+
+  - type: input
+    id: option_8_3
+    attributes:
+      label: Option 3
+      placeholder: "Enter option 3"
+    validations:
+      required: true
+
+  - type: input
+    id: option_8_4
+    attributes:
+      label: Option 4
+      placeholder: "Enter option 4"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: correct_8
+    attributes:
+      label: Correct Option
+      description: "Select the correct option number (1-4)"
+      options:
+        - 1
+        - 2
+        - 3
+        - 4
+    validations:
+      required: true
+
+  - type: textarea
+    id: solution_8
+    attributes:
+      label: Solution
+      placeholder: "Enter the explanation or solution for the correct answer"
+    validations:
+      required: true
+
+  # Question 9
+  - type: input
+    id: question_9
+    attributes:
+      label: Question 9
+      placeholder: "Enter the question text"
+    validations:
+      required: true
+
+  - type: input
+    id: option_9_1
+    attributes:
+      label: Option 1
+      placeholder: "Enter option 1"
+    validations:
+      required: true
+
+  - type: input
+    id: option_9_2
+    attributes:
+      label: Option 2
+      placeholder: "Enter option 2"
+    validations:
+      required: true
+
+  - type: input
+    id: option_9_3
+    attributes:
+      label: Option 3
+      placeholder: "Enter option 3"
+    validations:
+      required: true
+
+  - type: input
+    id: option_9_4
+    attributes:
+      label: Option 4
+      placeholder: "Enter option 4"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: correct_9
+    attributes:
+      label: Correct Option
+      description: "Select the correct option number (1-4)"
+      options:
+        - 1
+        - 2
+        - 3
+        - 4
+    validations:
+      required: true
+
+  - type: textarea
+    id: solution_9
+    attributes:
+      label: Solution
+      placeholder: "Enter the explanation or solution for the correct answer"
+    validations:
+      required: true
+
+  # Question 10
+  - type: input
+    id: question_10
+    attributes:
+      label: Question 10
+      placeholder: "Enter the question text"
+    validations:
+      required: true
+
+  - type: input
+    id: option_10_1
+    attributes:
+      label: Option 1
+      placeholder: "Enter option 1"
+    validations:
+      required: true
+
+  - type: input
+    id: option_10_2
+    attributes:
+      label: Option 2
+      placeholder: "Enter option 2"
+    validations:
+      required: true
+
+  - type: input
+    id: option_10_3
+    attributes:
+      label: Option 3
+      placeholder: "Enter option 3"
+    validations:
+      required: true
+
+  - type: input
+    id: option_10_4
+    attributes:
+      label: Option 4
+      placeholder: "Enter option 4"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: correct_10
+    attributes:
+      label: Correct Option
+      description: "Select the correct option number (1-4)"
+      options:
+        - 1
+        - 2
+        - 3
+        - 4
+    validations:
+      required: true
+
+  - type: textarea
+    id: solution_10
+    attributes:
+      label: Solution
+      placeholder: "Enter the explanation or solution for the correct answer"
+    validations:
+      required: true
