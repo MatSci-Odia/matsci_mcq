@@ -10,10 +10,16 @@ permissions:
   issues: write
 jobs:
   convert:
-    if: contains(join(github.event.issue.labels.*.name, ','), 'custom-mcq')
     runs-on: ubuntu-latest
 
     steps:
+    - name: Check if issue has label 'custom-mcq'
+      id: check_label
+      run: |
+        echo "labels=${{ toJson(github.event.issue.labels) }}"  # debug
+        labels='${{ toJson(github.event.issue.labels) }}'
+        echo "$labels" | grep -q '"name": "custom-mcq"' || (echo "Label 'custom-mcq' not found. Skipping job." && exit 78)
+
     - name: Checkout Code
       uses: actions/checkout@v4
       with:
