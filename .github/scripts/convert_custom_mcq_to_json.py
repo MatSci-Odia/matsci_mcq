@@ -1,102 +1,81 @@
-import sys
 import json
+import os
 import re
+import sys
 
-def parse_issue_markdown(filename):
-    with open(filename, "r", encoding="utf-8") as f:
-        lines = [line.strip() for line in f.readlines()]
+# Load GitHub issue JSON (assuming the file 'issue.json' exists)
+with open("issue.json", "r") as f:
+    issue = json.load(f)
 
-    data = {
-        "file_name": None,
-        "mcq_data": []  # changed key name here
-    }
+body = issue.get("body", "")
 
-    current_question = {}
-    current_field = None
+# Extract the file name (after ### File Name)
+file_name_match = re.search(r"### File Name\s+([^\n]+)", body)
+if not file_name_match:
+    print("❌ File name not found")
+    sys.exit(1)
+file_name = file_name_match.group(1).strip()
 
-    header_pattern = re.compile(r"^###\s+(.*)$")
+# Find all questions blocks by splitting on '### Question ' followed by a number
+question_splits = re.split(r"### Question \d+\s*", body)[1:]  # first split is before Question 1, so skip it
 
-    for line in lines:
-        if not line:
-            continue
+mcq_data = []
 
-        m = header_pattern.match(line)
-        if m:
-            header = m.group(1).strip()
-
-            if header.startswith("Question "):
-                if current_question:
-                    data["mcq_data"].append(current_question)
-                current_question = {
-                    "question": "",
-                    "options": ["", "", "", ""],
-                    "correct": None,
-                    "solution": ""
-                }
-                current_field = "question"
-            elif header == "File Name":
-                current_field = "file_name"
-            elif header.startswith("Option "):
-                option_number = int(header.split()[1])
-                if 1 <= option_number <= 4:
-                    current_field = f"option_{option_number}"
-                else:
-                    current_field = None
-            elif header == "Correct Option":
-                current_field = "correct"
-            elif header == "Solution":
-                current_field = "solution"
-            else:
-                current_field = None
-            continue
-
-        # Value assignment based on current field
-        if current_field == "file_name":
-            data["file_name"] = line
-        elif current_field == "question":
-            current_question["question"] = (current_question["question"] + " " + line).strip()
-        elif current_field and current_field.startswith("option_"):
-            idx = int(current_field.split("_")[1]) - 1
-            current_question["options"][idx] = (current_question["options"][idx] + " " + line).strip()
-        elif current_field == "correct":
-            try:
-                val = int(line)
-                if 1 <= val <= 4:
-                    current_question["correct"] = val
-            except ValueError:
-                pass
-        elif current_field == "solution":
-            current_question["solution"] = (current_question["solution"] + " " + line).strip()
-
-    # Append last question if valid
-    if current_question:
-        data["mcq_data"].append(current_question)
-
-    # Filter out incomplete questions
-    data["mcq_data"] = [q for q in data["mcq_data"] if q["question"] and q["correct"] is not None]
-
-    return data
-
-def main():
-    if len(sys.argv) != 2:
-        print("Usage: python convert_github_issue_to_json.py <issue_body_file.md>")
+for q_block in question_splits:
+    # Extract question text (up to next ### Option 1)
+    question_match = re.match(r"(.*?)\s+### Option 1\s+", q_block, re.DOTALL)
+    if not question_match:
+        print("❌ Question text not found or badly formatted.")
         sys.exit(1)
+    question_text = question_match.group(1).strip()
 
-    filename = sys.argv[1]
-    parsed = parse_issue_markdown(filename)
-
-    json_file_name = "questions.json"
-    if parsed["file_name"]:
-        json_file_name = parsed["file_name"]
-        if json_file_name.lower().endswith(".docx"):
-            json_file_name = json_file_name[:-5] + ".json"
+    # Extract options
+    options = []
+    for i in range(1, 5):
+        opt_match = re.search(rf"### Option {i}\s+(.*?)(?:\s+### Option {i+1}|### Correct Option|### Solution|$)", q_block, re.DOTALL)
+        if opt_match:
+            opt_text = opt_match.group(1).strip().replace("&nbsp;", " ").replace("\n", " ").strip()
+            options.append(opt_text)
         else:
-            json_file_name = json_file_name + ".json"
+            options.append("")  # if missing option
 
-    with open(json_file_name, "w", encoding="utf-8") as f:
-        json.dump(parsed, f, indent=2, ensure_ascii=False)
+    # Extract correct option number
+    correct_match = re.search(r"### Correct Option\s+(\d+)", q_block)
+    if not correct_match:
+        print("❌ Correct option not found.")
+        sys.exit(1)
+    correct_option = int(correct_match.group(1))
 
-    print(json_file_name)
+    # Extract solution text
+    solution_match = re.search(r"### Solution\s+(.*?)(?=### Question \d+|$)", q_block, re.DOTALL)
+    if not solution_match:
+        print("❌ Solution not found.")
+        sys.exit(1)
+    solution_text = solution_match.group(1).strip().replace("&nbsp;", " ").replace("\n", " ").strip()
 
-if __name__ == "__main__":
-    main()
+    mcq_data.append({
+        "question": question_text,
+        "options": options,
+        "correct": correct_option,
+        "solution": solution_text
+    })
+
+# Prepare final JSON
+final_json = {
+    "file_name": file_name,
+    "mcq_data": mcq_data
+}
+
+# Make sure output folder exists
+os.makedirs("resources", exist_ok=True)
+
+# Save JSON file with name based on file_name (replace .docx with .json)
+json_filename = file_name.replace(".docx", ".json")
+output_path = os.path.join("resources", json_filename)
+
+with open(output_path, "w") as out_f:
+    json.dump(final_json, out_f, indent=2)
+
+print(f"✅ Saved parsed MCQ JSON to: {output_path}", file=sys.stderr)
+print(output_path)  # For GitHub Actions output capture
+sys.stdout.flush()

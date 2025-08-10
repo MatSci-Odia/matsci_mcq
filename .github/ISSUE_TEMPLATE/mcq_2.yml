@@ -1,7 +1,7 @@
 name: 📝 Add 2 MCQ Test
 description: Submit a test with multiple-choice questions.
 title: "[Your Test Title]"
-labels: [ 2mcq ]
+labels: [ 'custom-mcq' ]
 
 body:
   - type: input
