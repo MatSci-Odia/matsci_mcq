@@ -10,6 +10,7 @@ permissions:
   issues: write
 jobs:
   convert:
+    if: contains(join(github.event.issue.labels.*.name, ','), 'dynamic-question')
     runs-on: ubuntu-latest
 
     steps:

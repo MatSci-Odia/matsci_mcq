@@ -1,7 +1,7 @@
 name: "📝 Issue To MatSci MCQ Test Generator"
 description: Submit a new MCQ test with title, file name, and list of questions.
 title: "Add MCQ Test - [Test Name]"
-labels: ["question", "pending"]
+labels: ["dynamic-question"]
 body:
   - type: input
     id: title
