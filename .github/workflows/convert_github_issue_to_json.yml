@@ -37,7 +37,7 @@ jobs:
 
     - name: Run selected script and generate document
       run: |
-        python matsci_mcq.py resources/Class_11_Prog_Fundamentals_test_10_aug.json
+        python matsci_mcq.py "resources/${{ steps.parse_issue.outputs.file_name }}"
 
     - name: Upload .docx as artifact
       uses: actions/upload-artifact@v4
