@@ -37,7 +37,7 @@ jobs:
 
     - name: Run selected script and generate document
       run: |
-        python matsci_mcq.py "${{ steps.convert.outputs.file_name }}"
+        python3 matsci_mcq.py "${{ steps.convert.outputs.file_name }}"
 
     - name: Upload .docx as artifact
       uses: actions/upload-artifact@v4
