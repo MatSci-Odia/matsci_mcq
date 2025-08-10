@@ -1,0 +1,185 @@
+name: 📝 Add MCQ Test
+description: Submit a test with multiple-choice questions.
+title: "Add MCQ Test - [Your Test Title]"
+labels: [question, pending]
+
+body:
+  - type: input
+    id: file_name
+    attributes:
+      label: File Name
+      description: "Output `.docx` file name (e.g., `Class_11_Prog_Fundamentals.docx`). Use underscores instead of spaces."
+      placeholder: Class_11_Prog_Fundamentals.docx
+      required: true
+
+  - type: input
+    id: test_title
+    attributes:
+      label: Test Title
+      placeholder: "Class 11 Programming Fundamentals"
+      required: true
+
+  # Question 1
+  - type: input
+    id: question_1
+    attributes:
+      label: Question 1
+      placeholder: "Enter the question text"
+      required: true
+
+  - type: input
+    id: option_1_1
+    attributes:
+      label: Option 1 for Question 1
+      placeholder: "Enter option 1"
+      required: true
+
+  - type: input
+    id: option_1_2
+    attributes:
+      label: Option 2 for Question 1
+      placeholder: "Enter option 2"
+      required: true
+
+  - type: input
+    id: option_1_3
+    attributes:
+      label: Option 3 for Question 1
+      placeholder: "Enter option 3"
+      required: true
+
+  - type: input
+    id: option_1_4
+    attributes:
+      label: Option 4 for Question 1
+      placeholder: "Enter option 4"
+      required: true
+
+  - type: dropdown
+    id: correct_1
+    attributes:
+      label: Correct Option for Question 1
+      description: "Select the correct option number (1-4)"
+      options:
+        - 1
+        - 2
+        - 3
+        - 4
+      required: true
+
+  - type: textarea
+    id: solution_1
+    attributes:
+      label: Solution for Question 1
+      placeholder: "Enter the explanation or solution for the correct answer"
+      required: true
+
+  # Question 2
+  - type: input
+    id: question_2
+    attributes:
+      label: Question 2
+      placeholder: "Enter the question text"
+      required: true
+
+  - type: input
+    id: option_2_1
+    attributes:
+      label: Option 1 for Question 2
+      placeholder: "Enter option 1"
+      required: true
+
+  - type: input
+    id: option_2_2
+    attributes:
+      label: Option 2 for Question 2
+      placeholder: "Enter option 2"
+      required: true
+
+  - type: input
+    id: option_2_3
+    attributes:
+      label: Option 3 for Question 2
+      placeholder: "Enter option 3"
+      required: true
+
+  - type: input
+    id: option_2_4
+    attributes:
+      label: Option 4 for Question 2
+      placeholder: "Enter option 4"
+      required: true
+
+  - type: dropdown
+    id: correct_2
+    attributes:
+      label: Correct Option for Question 2
+      description: "Select the correct option number (1-4)"
+      options:
+        - 1
+        - 2
+        - 3
+        - 4
+      required: true
+
+  - type: textarea
+    id: solution_2
+    attributes:
+      label: Solution for Question 2
+      placeholder: "Enter the explanation or solution for the correct answer"
+      required: true
+
+  # Question 3
+  - type: input
+    id: question_3
+    attributes:
+      label: Question 3
+      placeholder: "Enter the question text"
+      required: true
+
+  - type: input
+    id: option_3_1
+    attributes:
+      label: Option 1 for Question 3
+      placeholder: "Enter option 1"
+      required: true
+
+  - type: input
+    id: option_3_2
+    attributes:
+      label: Option 2 for Question 3
+      placeholder: "Enter option 2"
+      required: true
+
+  - type: input
+    id: option_3_3
+    attributes:
+      label: Option 3 for Question 3
+      placeholder: "Enter option 3"
+      required: true
+
+  - type: input
+    id: option_3_4
+    attributes:
+      label: Option 4 for Question 3
+      placeholder: "Enter option 4"
+      required: true
+
+  - type: dropdown
+    id: correct_3
+    attributes:
+      label: Correct Option for Question 3
+      description: "Select the correct option number (1-4)"
+      options:
+        - 1
+        - 2
+        - 3
+        - 4
+      required: true
+
+  - type: textarea
+    id: solution_3
+    attributes:
+      label: Solution for Question 3
+      placeholder: "Enter the explanation or solution for the correct answer"
+      required: true
