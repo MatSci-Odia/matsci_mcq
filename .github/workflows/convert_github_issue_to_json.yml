@@ -10,7 +10,7 @@ permissions:
   issues: write
 jobs:
   convert:
-    if: contains(join(github.event.issue.labels.*.name, ','), 'dynamic-question')
+    if: !contains(join(github.event.issue.labels.*.name, ','), 'custom-mcq')
     runs-on: ubuntu-latest
 
     steps:
