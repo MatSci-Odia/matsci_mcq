@@ -303,7 +303,7 @@ body:
       required: true
 
   - type: dropdown
-    id: correct_4
+    id: correct_5
     attributes:
       label: Correct Option
       description: "Select the correct option number (1-4)"
@@ -365,7 +365,7 @@ body:
       required: true
 
   - type: dropdown
-    id: correct_4
+    id: correct_6
     attributes:
       label: Correct Option
       description: "Select the correct option number (1-4)"
@@ -427,7 +427,7 @@ body:
       required: true
 
   - type: dropdown
-    id: correct_4
+    id: correct_7
     attributes:
       label: Correct Option
       description: "Select the correct option number (1-4)"
@@ -489,7 +489,7 @@ body:
       required: true
 
   - type: dropdown
-    id: correct_4
+    id: correct_8
     attributes:
       label: Correct Option
       description: "Select the correct option number (1-4)"
@@ -551,7 +551,7 @@ body:
       required: true
 
   - type: dropdown
-    id: correct_4
+    id: correct_9
     attributes:
       label: Correct Option
       description: "Select the correct option number (1-4)"
@@ -613,7 +613,7 @@ body:
       required: true
 
   - type: dropdown
-    id: correct_4
+    id: correct_10
     attributes:
       label: Correct Option
       description: "Select the correct option number (1-4)"
