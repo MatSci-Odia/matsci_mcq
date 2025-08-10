@@ -1,0 +1,66 @@
+{
+  "title": "Class 11 Computer Organization",
+  "file_name": "Class_11_Computer_Organization.docx",
+  "mcq_data": [
+  {
+    "question": "Which part of the CPU performs calculations and logical operations?",
+    "options": ["Control Unit", "ALU", "Register", "Cache"],
+    "correct": 2,
+    "solution": "The ALU (Arithmetic Logic Unit) performs calculations and logical operations."
+  },
+  {
+    "question": "RAM is a type of ____ memory.",
+    "options": ["Non-volatile", "Volatile", "Permanent", "Secondary"],
+    "correct": 2,
+    "solution": "RAM is volatile memory because it loses data when the power is off."
+  },
+  {
+    "question": "Which of the following is an example of an input device?",
+    "options": ["Printer", "Monitor", "Keyboard", "Speaker"],
+    "correct": 3,
+    "solution": "A keyboard is an input device used to enter data into a computer."
+  },
+  {
+    "question": "Which component of the CPU directs the flow of data and instructions?",
+    "options": ["Cache", "Control Unit", "RAM", "Hard Disk"],
+    "correct": 2,
+    "solution": "The Control Unit directs the flow of data and instructions in the CPU."
+  },
+  {
+    "question": "Which of these is an output device?",
+    "options": ["Mouse", "Monitor", "Keyboard", "Scanner"],
+    "correct": 2,
+    "solution": "A monitor is an output device that displays information."
+  },
+  {
+    "question": "What does RAM stand for?",
+    "options": ["Read Access Memory", "Random Access Memory", "Rapid Access Memory", "Read And Modify"],
+    "correct": 2,
+    "solution": "RAM stands for Random Access Memory."
+  },
+  {
+    "question": "Which type of memory is the fastest?",
+    "options": ["RAM", "Hard Disk", "Cache", "CD-ROM"],
+    "correct": 3,
+    "solution": "Cache memory is the fastest type of memory in a computer."
+  },
+  {
+    "question": "Which of the following stores data permanently?",
+    "options": ["RAM", "ROM", "Cache", "Registers"],
+    "correct": 2,
+    "solution": "ROM (Read Only Memory) stores data permanently."
+  },
+  {
+    "question": "Which of the following is an example of an output device?",
+    "options": ["Mouse", "Printer", "Keyboard", "Joystick"],
+    "correct": 2,
+    "solution": "A printer is an output device that produces a hard copy of digital data."
+  },
+  {
+    "question": "The speed of the CPU is measured in:",
+    "options": ["Bytes", "Bits", "Hertz", "Megabytes"],
+    "correct": 3,
+    "solution": "The speed of the CPU is measured in Hertz (cycles per second)."
+  }
+  ]
+}
