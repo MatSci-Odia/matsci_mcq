@@ -1,0 +1,24 @@
+[
+  {
+    "question": "Which is a valid loop in Java?",
+    "options": [
+      "if",
+      "while",
+      "case",
+      "goto"
+    ],
+    "correct": 2,
+    "solution": "while is used to loop in Java."
+  },
+  {
+    "question": "What is the output of 2+2?",
+    "options": [
+      "3",
+      "4",
+      "5",
+      "22"
+    ],
+    "correct": 2,
+    "solution": "2 + 2 = 5"
+  }
+]
