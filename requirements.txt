@@ -6,3 +6,4 @@ black
 isort
 docx2pdf
 PyYAML
+python-docx
