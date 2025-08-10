@@ -25,23 +25,32 @@ doc.add_heading(title, level=1)
 
 # Generate MCQs
 for idx, mcq in enumerate(mcq_data, 1):
-    table = doc.add_table(rows=8, cols=3)
+    options = mcq.get("options", [])
+    correct_index_1based = mcq.get("correct", 1)  # default to first option if missing
+
+    table = doc.add_table(rows=4 + 4, cols=3)  # 4 options + 4 metadata rows
     table.style = 'Table Grid'
 
+    # Question
     table.cell(0, 0).text = f"Question #{idx}"
-    table.cell(0, 1).merge(table.cell(0, 2)).text = mcq["question"]
+    table.cell(0, 1).merge(table.cell(0, 2)).text = mcq.get("question", "")
 
+    # Question type
     table.cell(1, 0).text = "Type"
     table.cell(1, 1).merge(table.cell(1, 2)).text = "multiple_choice"
 
-    for i in range(4):
+    # Options
+    for i, opt in enumerate(options):
         table.cell(2 + i, 0).text = "Option"
-        table.cell(2 + i, 1).text = mcq["options"][i]
-        table.cell(2 + i, 2).text = "correct" if i == mcq["correct"] else "incorrect"
+        table.cell(2 + i, 1).text = opt
+        # compare with 1-based index from JSON
+        table.cell(2 + i, 2).text = "correct" if (i + 1) == correct_index_1based else "incorrect"
 
+    # Solution
     table.cell(6, 0).text = "Solution"
-    table.cell(6, 1).merge(table.cell(6, 2)).text = mcq["solution"]
+    table.cell(6, 1).merge(table.cell(6, 2)).text = mcq.get("solution", "")
 
+    # Marks
     table.cell(7, 0).text = "Marks"
     table.cell(7, 1).text = "1"
     table.cell(7, 2).text = "0"
