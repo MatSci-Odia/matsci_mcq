@@ -16,11 +16,7 @@ jobs:
     - name: Check if issue has label 'custom-mcq'
       id: check_label
       run: |
-        echo "${{ github.event }}" 
-        if [[ "${{ github.event.label.name }}" != "custom-mcq" ]]; then
-          echo "Label added is not 'custom-mcq'. Skipping."
-          exit 78
-        fi
+        run: echo '${{ toJson(github.event) }}' > event.json && cat event.json
 
     - name: Checkout Code
       uses: actions/checkout@v4
