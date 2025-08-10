@@ -16,7 +16,7 @@ jobs:
     - name: Checkout Code
       uses: actions/checkout@v4
       with:
-        ref: test  # Ensure we're on the correct branch
+        ref: main  # Ensure we're on the correct branch
 
     - name: Set up Python
       uses: actions/setup-python@v3
