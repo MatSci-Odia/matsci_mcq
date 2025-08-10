@@ -265,7 +265,7 @@ body:
   - type: input
     id: question_5
     attributes:
-      label: Question 4
+      label: Question 5
       placeholder: "Enter the question text"
     validations:
       required: true
@@ -327,7 +327,7 @@ body:
   - type: input
     id: question_6
     attributes:
-      label: Question 4
+      label: Question 6
       placeholder: "Enter the question text"
     validations:
       required: true
@@ -389,7 +389,7 @@ body:
   - type: input
     id: question_7
     attributes:
-      label: Question 4
+      label: Question 7
       placeholder: "Enter the question text"
     validations:
       required: true
@@ -451,7 +451,7 @@ body:
   - type: input
     id: question_8
     attributes:
-      label: Question 4
+      label: Question 8
       placeholder: "Enter the question text"
     validations:
       required: true
@@ -513,7 +513,7 @@ body:
   - type: input
     id: question_9
     attributes:
-      label: Question 4
+      label: Question 9
       placeholder: "Enter the question text"
     validations:
       required: true
@@ -575,7 +575,7 @@ body:
   - type: input
     id: question_10
     attributes:
-      label: Question 4
+      label: Question 10
       placeholder: "Enter the question text"
     validations:
       required: true
