@@ -7,7 +7,7 @@ on:
 
 permissions:
   contents: write  # 👈 REQUIRED to allow push from github-actions bot
-
+  issues: write
 jobs:
   convert:
     runs-on: ubuntu-latest
