@@ -24,14 +24,16 @@ jobs:
         python-version: '3.x'
 
     - name: Install dependencies
-      run: pip install PyYAML
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
 
     - name: Parse Issue and Convert to JSON
       run: |
         echo '${{ toJson(github.event.issue) }}' > issue.json
         cat issue.json
         file_name=$(python .github/scripts/convert_github_issue_to_json.py)
-        echo "file_name=$file_name" >> $GITHUB_OUTPUT
+        echo "file_name=$file_name" >> "$GITHUB_OUTPUT"
 
     - name: Run selected script and generate document
       run: |
