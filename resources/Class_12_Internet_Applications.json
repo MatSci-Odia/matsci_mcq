@@ -1,0 +1,66 @@
+{
+  "title": "Class 12 Internet & Its Applications",
+  "file_name": "Class_12_Internet_Applications.docx",
+  "mcq_data": [
+  {
+    "question": "Which protocol is used to transfer web pages over the Internet?",
+    "options": ["FTP", "SMTP", "HTTP", "POP3"],
+    "correct": 3,
+    "solution": "HTTP (Hypertext Transfer Protocol) is used to transfer web pages."
+  },
+  {
+    "question": "Which of the following is an example of a search engine?",
+    "options": ["Google", "Yahoo Mail", "Dropbox", "Skype"],
+    "correct": 1,
+    "solution": "Google is a search engine used to find information on the Internet."
+  },
+  {
+    "question": "What is the main purpose of DNS in the Internet?",
+    "options": ["To encrypt data", "To store web pages", "To translate domain names into IP addresses", "To speed up the Internet"],
+    "correct": 3,
+    "solution": "DNS (Domain Name System) translates domain names into IP addresses."
+  },
+  {
+    "question": "Which of the following is not a web browser?",
+    "options": ["Chrome", "Firefox", "Edge", "Windows"],
+    "correct": 4,
+    "solution": "Windows is an operating system, not a web browser."
+  },
+  {
+    "question": "What does URL stand for?",
+    "options": ["Uniform Resource Locator", "Universal Resource Link", "Uniform Retrieval Locator", "Universal Retrieval Link"],
+    "correct": 1,
+    "solution": "URL stands for Uniform Resource Locator."
+  },
+  {
+    "question": "Which protocol is used for sending emails?",
+    "options": ["HTTP", "SMTP", "POP3", "IMAP"],
+    "correct": 2,
+    "solution": "SMTP (Simple Mail Transfer Protocol) is used to send emails."
+  },
+  {
+    "question": "Which of the following is an example of cloud storage service?",
+    "options": ["Google Drive", "Chrome", "YouTube", "Instagram"],
+    "correct": 1,
+    "solution": "Google Drive is a cloud storage service."
+  },
+  {
+    "question": "What is the main function of a firewall?",
+    "options": ["To store data", "To block unauthorized access", "To increase Internet speed", "To host websites"],
+    "correct": 2,
+    "solution": "A firewall blocks unauthorized access while permitting legitimate communication."
+  },
+  {
+    "question": "Which of the following is an example of e-commerce?",
+    "options": ["Buying books from Amazon", "Watching videos on YouTube", "Using Google Maps", "Sending an email"],
+    "correct": 1,
+    "solution": "Buying books from Amazon is an example of online shopping, a form of e-commerce."
+  },
+  {
+    "question": "Which of the following allows real-time text and voice communication over the Internet?",
+    "options": ["VoIP", "SMTP", "FTP", "HTTP"],
+    "correct": 1,
+    "solution": "VoIP (Voice over Internet Protocol) allows real-time text and voice communication."
+  }
+]
+}
