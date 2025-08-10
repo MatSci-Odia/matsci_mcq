@@ -2,7 +2,7 @@ name: Convert Custom Issue to Question File
 
 on:
   issues:
-    types: [opened, edited]
+    types: [labeled]
   workflow_dispatch:
 
 permissions:
@@ -10,14 +10,9 @@ permissions:
   issues: write
 jobs:
   convert:
+    if: contains(join(github.event.issue.labels.*.name, ','), 'custom-mcq')
     runs-on: ubuntu-latest
-
     steps:
-    - name: Check if issue has label 'custom-mcq'
-      id: check_label
-      run: |
-        run: echo '${{ toJson(github.event) }}' > event.json && cat event.json
-
     - name: Checkout Code
       uses: actions/checkout@v4
       with:

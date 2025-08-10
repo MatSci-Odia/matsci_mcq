@@ -2,7 +2,7 @@ name: Convert Issue to Question File
 
 on:
   issues:
-    types: [opened, edited]
+    types: [labeled]
   workflow_dispatch:
 
 permissions:
