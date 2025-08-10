@@ -1,9 +1,10 @@
 import json
 import os
 import re
+import sys
 
 # Load GitHub issue JSON
-with open("tests/issue.json", "r") as f:
+with open("issue.json", "r") as f:
     issue = json.load(f)
 
 body = issue.get("body", "")
@@ -43,4 +44,7 @@ output_path = os.path.join("resources", file_value.replace(".docx", ".json"))
 with open(output_path, "w") as out_file:
     json.dump(final_data, out_file, indent=2)
 
-print(f"✅ Saved MCQ test to {output_path}")
+# Log to stderr for humans
+print(f"✅ Saved MCQ test to {output_path}", file=sys.stderr)
+print(output_path)
+sys.stdout.flush()
