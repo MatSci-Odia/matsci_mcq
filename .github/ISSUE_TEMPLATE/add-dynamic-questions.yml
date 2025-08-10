@@ -1,7 +1,19 @@
-name: "📝 Add New MCQ Test"
+name: "📝 Matsci MCQ Generator"
 description: Submit a new MCQ test with title, file name, and list of questions.
 title: "Add MCQ Test - [Test Name]"
 labels: ["question", "pending"]
+
+# filename moved outside the body
+file_name:
+  label: File Name
+  description: |
+    Output `.docx` file name (e.g., `Class_11_Prog_Fundamentals.docx`).
+    Avoid spaces and use underscores.
+  placeholder: "Class_11_Prog_Fundamentals.docx"
+  required: true
+  validations:
+    required: true
+
 body:
   - type: input
     id: title
@@ -10,17 +22,6 @@ body:
       description: |
         Title of the test (e.g., "Class 11 Prog Fundamentals")
       placeholder: "Class 11 Prog Fundamentals"
-    validations:
-      required: true
-
-  - type: input
-    id: file_name
-    attributes:
-      label: File Name
-      description: |
-        Output `.docx` file name (e.g., `Class_11_Prog_Fundamentals.docx`).
-        Avoid spaces and use underscores.
-      placeholder: "Class_11_Prog_Fundamentals.docx"
     validations:
       required: true
 
