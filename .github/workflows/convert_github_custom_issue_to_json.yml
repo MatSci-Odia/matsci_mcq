@@ -1,4 +1,4 @@
-name: Convert Issue to Question File
+name: Convert Custom Issue to Question File
 
 on:
   issues:
