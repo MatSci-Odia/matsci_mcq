@@ -2,7 +2,7 @@
 #
 #name: 📝 Add 2 MCQ Test
 #description: Submit a test with multiple-choice questions.
-#title: "[Your Test Title]"
+#title: "Matsci Weekly Test : <Class> - <Subject> - <Topic>"
 #labels: [ 'custom-mcq' ]
 #
 #body:

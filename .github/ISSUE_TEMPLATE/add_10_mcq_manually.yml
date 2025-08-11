@@ -1,7 +1,6 @@
 name: 📝 Add 10 MCQ Test
 description: Submit a test with multiple-choice questions.
-title: "[Your Test Title]"
-labels: [ question, pending ]
+title: "Matsci Weekly Test : <Class> - <Subject> - <Topic>"
 
 body:
   - type: input
