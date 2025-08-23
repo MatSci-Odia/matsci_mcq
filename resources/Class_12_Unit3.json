@@ -1,0 +1,66 @@
+{
+  "title": "Class 12 Unit 3",
+  "file_name": "Class_12_Unit3.docx",
+  "mcq_data": [
+  {
+    "question": "Which access specifier allows members to be accessed from any class?",
+    "options": ["private", "public", "protected", "default"],
+    "correct": 2,
+    "solution": "'public' members can be accessed from any class."
+  },
+  {
+    "question": "Which of the following is not a Java String method?",
+    "options": ["length()", "substring()", "toUpperCase()", "sqrt()"],
+    "correct": 4,
+    "solution": "'sqrt()' belongs to the Math class, not the String class."
+  },
+  {
+    "question": "Which tag is used to create a hyperlink in HTML?",
+    "options": ["<img>", "<a>", "<p>", "<div>"],
+    "correct": 2,
+    "solution": "The '<a>' tag is used to create hyperlinks in HTML."
+  },
+  {
+    "question": "What does HTTPS stand for?",
+    "options": ["HyperText Transfer Service", "HyperText Transmission Protocol", "HyperText Transfer Protocol Secure", "HyperText Technical Secure"],
+    "correct": 3,
+    "solution": "HTTPS stands for HyperText Transfer Protocol Secure."
+  },
+  {
+    "question": "In Java, which keyword is used for inheritance?",
+    "options": ["inherit", "extends", "implements", "super"],
+    "correct": 2,
+    "solution": "The 'extends' keyword is used for inheritance in Java."
+  },
+  {
+    "question": "Which HTML tag is used to insert an image?",
+    "options": ["<a>", "<img>", "<pic>", "<src>"],
+    "correct": 2,
+    "solution": "The '<img>' tag is used to insert an image in HTML."
+  },
+  {
+    "question": "Which of the following is an example of a firewall?",
+    "options": ["Antivirus software", "Cisco ASA", "VPN", "Cookies"],
+    "correct": 2,
+    "solution": "Cisco ASA is a hardware firewall used to protect networks."
+  },
+  {
+    "question": "Which Math class method is used to find the square root in Java?",
+    "options": ["pow()", "sqrt()", "abs()", "round()"],
+    "correct": 2,
+    "solution": "'sqrt()' method is used to find the square root of a number in Java."
+  },
+  {
+    "question": "Which HTML tag is used to define a table row?",
+    "options": ["<td>", "<th>", "<tr>", "<row>"],
+    "correct": 3,
+    "solution": "The '<tr>' tag defines a table row in HTML."
+  },
+  {
+    "question": "Which of the following best describes encryption?",
+    "options": ["Converting plain text into unreadable form", "Blocking unauthorized users", "Copying data", "Compressing files"],
+    "correct": 1,
+    "solution": "Encryption is the process of converting plain text into unreadable ciphertext."
+  }
+]
+}
