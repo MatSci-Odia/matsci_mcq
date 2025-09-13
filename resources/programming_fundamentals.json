@@ -3,224 +3,115 @@
   "file_name": "Class_11_Prog_Fundamentals_31_08_25.docx",
   "mcq_data": [
   {
-    "question": "Which of the following is a valid string declaration in Java?",
+    "question": "What will be the output of the following code?\n\nint x = 10;\nint y = 20;\nSystem.out.println(x > y ? x : y);",
     "options": [
-      "String str = \"Hello\";",
-      "string str = \"Hello\";",
-      "char str = \"Hello\";",
-      "int str = \"Hello\";"
-    ],
-    "correct": 1,
-    "solution": "In Java, string should be declared with an uppercase 'S' using the String class. So 'String str = \"Hello\";' is valid."
-  },
-  {
-    "question": "Which statement prints: He said \"Hello\"?",
-    "options": [
-      "System.out.println(\"He said \"Hello\"\");",
-      "System.out.println('He said \"Hello\"');",
-      "System.out.println(\"He said \\\"Hello\\\"\");",
-      "System.out.println(\"He said /\"Hello/\");"
-    ],
-    "correct": 3,
-    "solution": "To print quotes inside a string in Java, you must escape them with a backslash (\\\")."
-  },
-  {
-    "question": "Which escape sequence represents a new line in Java?",
-    "options": [
-      "\\t",
-      "\\n",
-      "\\\\",
-      "\\\""
+      "10",
+      "20",
+      "true",
+      "false"
     ],
     "correct": 2,
-    "solution": "The escape sequence '\\n' represents a new line in Java."
+    "solution": "The ternary operator returns the greater of x and y. Since 20 > 10, it prints 20."
   },
   {
-    "question": "Which of these is NOT a primitive datatype in Java?",
+    "question": "What will the following code print?\n\nfor (int i = 0; i < 5; i++) {\n   if (i == 3) break;\n   System.out.print(i);\n}",
     "options": [
-      "int",
-      "float",
-      "String",
-      "boolean"
+      "01234",
+      "0123",
+      "012",
+      "Error"
     ],
     "correct": 3,
-    "solution": "String is not a primitive type in Java; it is a class."
+    "solution": "When i == 3, 'break' exits the loop. Hence the output is 012."
   },
   {
-    "question": "What will be the output of: int x = 4; System.out.println(x * 3);",
+    "question": "What will be the output of the code below?\n\nint a = 5;\nint b = 2;\ndouble c = a / b;\nSystem.out.println(c);",
     "options": [
-      "7",
-      "12",
-      "43",
+      "2",
+      "2.0",
+      "2.5",
       "Error"
     ],
     "correct": 2,
-    "solution": "x * 3 = 4 * 3 = 12, so the output is 12."
+    "solution": "Since both a and b are integers, integer division occurs first (5/2 = 2). Then it's stored in a double, so the result is 2.0."
   },
   {
-    "question": "Which operator is used for equality check?",
-    "options": [
-      "=",
-      "==",
-      "equals",
-      "!="
-    ],
-    "correct": 2,
-    "solution": "The '==' operator checks for equality of primitive values in Java."
-  },
-  {
-    "question": "Which method compares the content of two strings?",
-    "options": [
-      "==",
-      "equals()",
-      "compareTo()",
-      "compare()"
-    ],
-    "correct": 2,
-    "solution": "The equals() method compares the content of two strings in Java."
-  },
-  {
-    "question": "What is the size of an int in Java?",
-    "options": [
-      "2 bytes",
-      "4 bytes",
-      "8 bytes",
-      "Depends on OS"
-    ],
-    "correct": 2,
-    "solution": "An int in Java always occupies 4 bytes, regardless of OS."
-  },
-  {
-    "question": "What is the size of a float in Java?",
-    "options": [
-      "2 bytes",
-      "4 bytes",
-      "8 bytes",
-      "Depends on JVM"
-    ],
-    "correct": 2,
-    "solution": "A float in Java is 32-bit, which is 4 bytes."
-  },
-  {
-    "question": "What is the size of a long in Java?",
-    "options": [
-      "4 bytes",
-      "8 bytes",
-      "16 bytes",
-      "2 bytes"
-    ],
-    "correct": 2,
-    "solution": "A long in Java is 64-bit, which is 8 bytes."
-  },
-  {
-    "question": "Which escape character is used for tab space?",
-    "options": [
-      "\\n",
-      "\\t",
-      "\\r",
-      "\\\\"
-    ],
-    "correct": 2,
-    "solution": "The escape sequence '\\t' represents a tab space."
-  },
-  {
-    "question": "Which one is NOT an operator in Java?",
-    "options": [
-      "+",
-      "-",
-      "**",
-      "%"
-    ],
-    "correct": 3,
-    "solution": "Java does not support the '**' operator for exponentiation."
-  },
-  {
-    "question": "Which of the following is a relational operator?",
-    "options": [
-      "&&",
-      "==",
-      "=",
-      "||"
-    ],
-    "correct": 2,
-    "solution": "The '==' operator is a relational operator that checks for equality."
-  },
-  {
-    "question": "Which of the following is NOT allowed as a variable name?",
-    "options": [
-      "count",
-      "_value",
-      "1number",
-      "myVar"
-    ],
-    "correct": 3,
-    "solution": "Variable names cannot start with a digit, so '1number' is invalid."
-  },
-  {
-    "question": "What is the default value of a boolean variable in Java (instance variable)?",
+    "question": "Predict the output:\n\nString s1 = \"Hello\";\nString s2 = new String(\"Hello\");\nSystem.out.println(s1 == s2);",
     "options": [
       "true",
       "false",
+      "Hello",
+      "Error"
+    ],
+    "correct": 2,
+    "solution": "The '==' operator compares references, not content. s1 and s2 point to different objects, so the result is false."
+  },
+  {
+    "question": "What will happen in this code?\n\nclass A {\n   void show() { System.out.println(\"A\"); }\n}\nclass B extends A {\n   void show() { System.out.println(\"B\"); }\n}\npublic class Test {\n   public static void main(String[] args) {\n      A obj = new B();\n      obj.show();\n   }\n}",
+    "options": [
+      "A",
+      "B",
+      "Error",
+      "AB"
+    ],
+    "correct": 2,
+    "solution": "Dynamic method dispatch in Java ensures that the overridden method in B is executed, so it prints 'B'."
+  },
+  {
+    "question": "What will be the output?\n\nint i = 0;\nwhile (i < 3) {\n   System.out.print(i);\n   i++;\n}\nSystem.out.print(i);",
+    "options": [
+      "012",
+      "0123",
+      "123",
+      "Error"
+    ],
+    "correct": 2,
+    "solution": "Loop prints 012, then i becomes 3 and is printed after the loop, giving 0123."
+  },
+  {
+    "question": "What will the following code print?\n\nint i;\nfor (i = 1; i <= 5; i++);\nSystem.out.println(i);",
+    "options": [
+      "1",
+      "5",
+      "6",
+      "Error"
+    ],
+    "correct": 3,
+    "solution": "The semicolon after the for loop makes it an empty loop. After loop execution, i = 6, which is printed."
+  },
+  {
+    "question": "Predict the output:\n\nString str = \"Java\";\nstr.concat(\"Programming\");\nSystem.out.println(str);",
+    "options": [
+      "JavaProgramming",
+      "Java",
+      "Programming",
+      "Error"
+    ],
+    "correct": 2,
+    "solution": "Strings are immutable in Java. concat() returns a new String but it’s not stored. So str remains 'Java'."
+  },
+  {
+    "question": "What will be printed?\n\nint[] arr = {1, 2, 3};\nSystem.out.println(arr[3]);",
+    "options": [
+      "3",
       "0",
-      "null"
-    ],
-    "correct": 2,
-    "solution": "The default value of a boolean instance variable in Java is false."
-  },
-  {
-    "question": "Which keyword is used to declare a constant in Java?",
-    "options": [
-      "const",
-      "final",
-      "static",
-      "immutable"
-    ],
-    "correct": 2,
-    "solution": "The 'final' keyword is used to declare constants in Java."
-  },
-  {
-    "question": "Which of the following is NOT a primitive datatype in Java?",
-    "options": [
-      "double",
-      "byte",
-      "char",
-      "String"
+      "null",
+      "ArrayIndexOutOfBoundsException"
     ],
     "correct": 4,
-    "solution": "String is not primitive; it is a class in Java."
+    "solution": "Array index starts at 0. arr has indexes 0,1,2. arr[3] is invalid, causing ArrayIndexOutOfBoundsException."
   },
   {
-    "question": "Which operator is used for logical AND?",
+    "question": "What will be the output?\n\nclass Test {\n   static int x = 10;\n   public static void main(String[] args) {\n      Test t1 = new Test();\n      Test t2 = new Test();\n      t1.x = 20;\n      System.out.println(t2.x);\n   }\n}",
     "options": [
-      "&&",
-      "||",
-      "&",
-      "!"
-    ],
-    "correct": 1,
-    "solution": "The '&&' operator is used for logical AND in Java."
-  },
-  {
-    "question": "Which operator is used for logical OR?",
-    "options": [
-      "&&",
-      "||",
-      "|",
-      "!"
+      "10",
+      "20",
+      "Error",
+      "Depends on JVM"
     ],
     "correct": 2,
-    "solution": "The '||' operator is used for logical OR in Java."
-  },
-  {
-    "question": "Which operator is used for NOT operation?",
-    "options": [
-      "!",
-      "~",
-      "!=",
-      "<>"
-    ],
-    "correct": 1,
-    "solution": "The '!' operator is used for logical NOT in Java."
+    "solution": "Static variables are shared among all objects. Changing t1.x updates it for all instances. So t2.x prints 20."
   }
 ]
+
 }
