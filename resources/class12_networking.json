@@ -1,0 +1,117 @@
+{
+  "title": "Class 12 Networking",
+  "file_name": "Class_12_Networking.docx",
+  "mcq_data": [
+  {
+    "question": "Which of the following is the main function of a firewall in a network?",
+    "options": [
+      "To detect viruses",
+      "To block unauthorized access",
+      "To encrypt data",
+      "To perform data backup"
+    ],
+    "correct": 2,
+    "solution": "A firewall acts as a security barrier between trusted and untrusted networks, mainly blocking unauthorized access while allowing legitimate communication."
+  },
+  {
+    "question": "Which type of malware disguises itself as legitimate software but performs malicious actions?",
+    "options": [
+      "Worm",
+      "Trojan Horse",
+      "Spyware",
+      "Ransomware"
+    ],
+    "correct": 2,
+    "solution": "A Trojan Horse appears to be legitimate software but contains hidden malicious code that compromises security."
+  },
+  {
+    "question": "Which of the following best describes a computer virus?",
+    "options": [
+      "A standalone program that spreads via networks",
+      "A self-replicating program that requires a host file",
+      "A tool to prevent unauthorized access",
+      "A method of encrypting data"
+    ],
+    "correct": 2,
+    "solution": "A computer virus is a malicious program that attaches itself to a host file and spreads when the infected file is executed."
+  },
+  {
+    "question": "What is IP spoofing primarily used for?",
+    "options": [
+      "Encrypting IP packets",
+      "Masking the identity of a sender",
+      "Blocking unauthorized websites",
+      "Detecting network intrusions"
+    ],
+    "correct": 2,
+    "solution": "IP spoofing is used to mask the sender’s identity by altering the source IP address, often to bypass security or impersonate a trusted source."
+  },
+  {
+    "question": "Which of the following is an example of ransomware?",
+    "options": [
+      "A program that monitors keystrokes",
+      "A program that encrypts user files and demands payment",
+      "A worm that spreads through email attachments",
+      "A tool that blocks pop-up ads"
+    ],
+    "correct": 2,
+    "solution": "Ransomware encrypts user files or locks systems, demanding payment to restore access."
+  },
+  {
+    "question": "Which of the following best describes a worm?",
+    "options": [
+      "A self-replicating program that spreads without user action",
+      "A malicious attachment hidden in legitimate software",
+      "A program designed to steal passwords",
+      "A program that prevents data loss"
+    ],
+    "correct": 1,
+    "solution": "A worm is a standalone self-replicating program that spreads across networks without requiring user action."
+  },
+  {
+    "question": "Which attack involves overwhelming a system with requests to make it unavailable to users?",
+    "options": [
+      "Phishing",
+      "Man-in-the-middle",
+      "Denial-of-Service (DoS)",
+      "Spoofing"
+    ],
+    "correct": 3,
+    "solution": "A DoS attack floods a system with requests, exhausting resources and making it unavailable to legitimate users."
+  },
+  {
+    "question": "What is the main purpose of spyware?",
+    "options": [
+      "To steal or monitor user information",
+      "To replicate and spread across networks",
+      "To encrypt files for ransom",
+      "To block network traffic"
+    ],
+    "correct": 1,
+    "solution": "Spyware secretly monitors user activities and collects sensitive information like browsing history or passwords."
+  },
+  {
+    "question": "Which of the following is an example of phishing?",
+    "options": [
+      "Sending fake emails to trick users into revealing personal data",
+      "Overloading a server with requests",
+      "Monitoring keystrokes without permission",
+      "Disguising malware as a utility program"
+    ],
+    "correct": 1,
+    "solution": "Phishing uses fake emails or websites to trick users into revealing sensitive data like passwords or credit card numbers."
+  },
+  {
+    "question": "Which of the following is NOT a common type of malware?",
+    "options": [
+      "Trojan Horse",
+      "Worm",
+      "Firewall",
+      "Spyware"
+    ],
+    "correct": 3,
+    "solution": "A firewall is a security tool, not malware. Trojan, Worm, and Spyware are all types of malicious software."
+  }
+]
+
+}
