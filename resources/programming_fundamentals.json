@@ -1,117 +1,128 @@
 {
-  "title": "Class 11 Prog Fundamentals 31_08_25",
-  "file_name": "Class_11_Prog_Fundamentals_31_08_25.docx",
-  "mcq_data": [
+  "title": "Class 11 Fundamentals 27_09_25",
+  "file_name": "Class_11_Test_27_09_25.docx",
+  "mcq_data": "mcq_data": [
   {
-    "question": "What will be the output of the following code?\n\nint x = 10;\nint y = 20;\nSystem.out.println(x > y ? x : y);",
-    "options": [
-      "10",
-      "20",
-      "true",
-      "false"
-    ],
+    "question": "Which of the following is a volatile memory in a computer system?",
+    "options": ["ROM", "RAM", "Hard Disk", "CD-ROM"],
     "correct": 2,
-    "solution": "The ternary operator returns the greater of x and y. Since 20 > 10, it prints 20."
+    "solution": "RAM is volatile memory because it loses data when power is turned off."
   },
   {
-    "question": "What will the following code print?\n\nfor (int i = 0; i < 5; i++) {\n   if (i == 3) break;\n   System.out.print(i);\n}",
-    "options": [
-      "01234",
-      "0123",
-      "012",
-      "Error"
-    ],
+    "question": "Which component of the CPU performs arithmetic and logical operations?",
+    "options": ["Control Unit", "Registers", "ALU", "Cache"],
     "correct": 3,
-    "solution": "When i == 3, 'break' exits the loop. Hence the output is 012."
+    "solution": "The ALU (Arithmetic Logic Unit) performs all arithmetic and logical operations inside the CPU."
   },
   {
-    "question": "What will be the output of the code below?\n\nint a = 5;\nint b = 2;\ndouble c = a / b;\nSystem.out.println(c);",
-    "options": [
-      "2",
-      "2.0",
-      "2.5",
-      "Error"
-    ],
-    "correct": 2,
-    "solution": "Since both a and b are integers, integer division occurs first (5/2 = 2). Then it's stored in a double, so the result is 2.0."
-  },
-  {
-    "question": "Predict the output:\n\nString s1 = \"Hello\";\nString s2 = new String(\"Hello\");\nSystem.out.println(s1 == s2);",
-    "options": [
-      "true",
-      "false",
-      "Hello",
-      "Error"
-    ],
-    "correct": 2,
-    "solution": "The '==' operator compares references, not content. s1 and s2 point to different objects, so the result is false."
-  },
-  {
-    "question": "What will happen in this code?\n\nclass A {\n   void show() { System.out.println(\"A\"); }\n}\nclass B extends A {\n   void show() { System.out.println(\"B\"); }\n}\npublic class Test {\n   public static void main(String[] args) {\n      A obj = new B();\n      obj.show();\n   }\n}",
-    "options": [
-      "A",
-      "B",
-      "Error",
-      "AB"
-    ],
-    "correct": 2,
-    "solution": "Dynamic method dispatch in Java ensures that the overridden method in B is executed, so it prints 'B'."
-  },
-  {
-    "question": "What will be the output?\n\nint i = 0;\nwhile (i < 3) {\n   System.out.print(i);\n   i++;\n}\nSystem.out.print(i);",
-    "options": [
-      "012",
-      "0123",
-      "123",
-      "Error"
-    ],
-    "correct": 2,
-    "solution": "Loop prints 012, then i becomes 3 and is printed after the loop, giving 0123."
-  },
-  {
-    "question": "What will the following code print?\n\nint i;\nfor (i = 1; i <= 5; i++);\nSystem.out.println(i);",
-    "options": [
-      "1",
-      "5",
-      "6",
-      "Error"
-    ],
+    "question": "Which of the following is an input device?",
+    "options": ["Monitor", "Printer", "OCR", "Plotter"],
     "correct": 3,
-    "solution": "The semicolon after the for loop makes it an empty loop. After loop execution, i = 6, which is printed."
+    "solution": "OCR (Optical Character Reader) is an input device that reads printed text and converts it into digital form."
   },
   {
-    "question": "Predict the output:\n\nString str = \"Java\";\nstr.concat(\"Programming\");\nSystem.out.println(str);",
-    "options": [
-      "JavaProgramming",
-      "Java",
-      "Programming",
-      "Error"
-    ],
+    "question": "Laser printers are classified as:",
+    "options": ["Impact printers", "Non-impact printers", "Dot matrix printers", "Line printers"],
     "correct": 2,
-    "solution": "Strings are immutable in Java. concat() returns a new String but it’s not stored. So str remains 'Java'."
+    "solution": "Laser printers are non-impact printers that use laser technology for high-quality printing."
   },
   {
-    "question": "What will be printed?\n\nint[] arr = {1, 2, 3};\nSystem.out.println(arr[3]);",
-    "options": [
-      "3",
-      "0",
-      "null",
-      "ArrayIndexOutOfBoundsException"
-    ],
+    "question": "Which of the following memory types is the fastest?",
+    "options": ["Cache", "RAM", "ROM", "Hard Disk"],
+    "correct": 1,
+    "solution": "Cache memory is the fastest memory, located close to the CPU to speed up processing."
+  },
+  {
+    "question": "Which of the following is NOT a function of the operating system?",
+    "options": ["Process management", "Memory management", "File management", "Designing hardware"],
     "correct": 4,
-    "solution": "Array index starts at 0. arr has indexes 0,1,2. arr[3] is invalid, causing ArrayIndexOutOfBoundsException."
+    "solution": "The operating system manages resources like processes, memory, and files, but it does not design hardware."
   },
   {
-    "question": "What will be the output?\n\nclass Test {\n   static int x = 10;\n   public static void main(String[] args) {\n      Test t1 = new Test();\n      Test t2 = new Test();\n      t1.x = 20;\n      System.out.println(t2.x);\n   }\n}",
-    "options": [
-      "10",
-      "20",
-      "Error",
-      "Depends on JVM"
-    ],
+    "question": "Which language processor translates and executes a program line by line?",
+    "options": ["Compiler", "Assembler", "Interpreter", "Linker"],
+    "correct": 3,
+    "solution": "An interpreter translates and executes code line by line, making debugging easier but slower."
+  },
+  {
+    "question": "Which utility software is used to rearrange fragmented files on a disk?",
+    "options": ["Antivirus", "Disk Defragmenter", "Compression Tool", "Task Manager"],
     "correct": 2,
-    "solution": "Static variables are shared among all objects. Changing t1.x updates it for all instances. So t2.x prints 20."
+    "solution": "Disk Defragmenter rearranges fragmented files so they are stored contiguously, improving access speed."
+  },
+  {
+    "question": "Which of the following is an example of open source software?",
+    "options": ["MS Office", "Linux", "Adobe Photoshop", "Oracle Database"],
+    "correct": 2,
+    "solution": "Linux is an open source operating system freely available for use and modification."
+  },
+  {
+    "question": "Which input method allows typing Indian language text using English phonetics?",
+    "options": ["Keymap based", "Unicode", "Phonetic typing", "TrueType Fonts"],
+    "correct": 3,
+    "solution": "Phonetic typing allows entering Indian language text by typing the equivalent English sounds."
+  },
+  {
+    "question": "Which device is used in banks to read characters printed with magnetic ink?",
+    "options": ["OCR", "MICR", "BCR", "OMR"],
+    "correct": 2,
+    "solution": "MICR (Magnetic Ink Character Reader) is used in banks for reading cheque details."
+  },
+  {
+    "question": "Which of the following is an example of a non-impact printer?",
+    "options": ["Dot Matrix Printer", "Line Printer", "Laser Printer", "Drum Printer"],
+    "correct": 3,
+    "solution": "Laser printers are non-impact printers that use laser beams for printing."
+  },
+  {
+    "question": "Registers in CPU are used for:",
+    "options": ["Permanent storage", "Temporary high-speed storage", "Storing operating system", "Long-term backups"],
+    "correct": 2,
+    "solution": "Registers provide temporary high-speed storage for instructions and data during processing."
+  },
+  {
+    "question": "Which type of RAM needs to be refreshed continuously?",
+    "options": ["SRAM", "DRAM", "ROM", "PROM"],
+    "correct": 2,
+    "solution": "DRAM (Dynamic RAM) needs continuous refreshing to retain data."
+  },
+  {
+    "question": "Which type of ROM can be erased using ultraviolet light?",
+    "options": ["PROM", "EPROM", "EEPROM", "Flash ROM"],
+    "correct": 2,
+    "solution": "EPROM (Erasable Programmable Read Only Memory) can be erased with ultraviolet light."
+  },
+  {
+    "question": "Which of the following is an example of general purpose application software?",
+    "options": ["Payroll System", "MS Excel", "Reservation System", "Inventory Management System"],
+    "correct": 2,
+    "solution": "MS Excel is a general purpose spreadsheet software used in many fields."
+  },
+  {
+    "question": "Which of the following is NOT an example of utility software?",
+    "options": ["Antivirus", "Compiler", "Compression Tool", "Disk Defragmenter"],
+    "correct": 2,
+    "solution": "A compiler is a language processor, not a utility software."
+  },
+  {
+    "question": "Which of the following standards is used for representing Indian languages digitally?",
+    "options": ["ASCII", "Unicode", "HTML", "XML"],
+    "correct": 2,
+    "solution": "Unicode is a universal standard used to represent characters from multiple languages, including Indian languages."
+  },
+  {
+    "question": "Which port is used to transfer data one bit at a time?",
+    "options": ["Parallel Port", "USB Port", "Serial Port", "HDMI Port"],
+    "correct": 3,
+    "solution": "Serial ports transfer data one bit at a time, commonly used for modems and older mice."
+  },
+  {
+    "question": "Which of the following is an example of specific purpose application software?",
+    "options": ["Word Processor", "Presentation Software", "Payroll System", "Spreadsheet"],
+    "correct": 3,
+    "solution": "Payroll System is a specific purpose application software designed for salary management."
   }
 ]
+
 
 }
