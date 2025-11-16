@@ -1,126 +1,66 @@
 {
-  "title": "Class 11 Fundamentals 27_09_25",
-  "file_name": "Class_11_Test_27_09_25.docx",
+  "title": "Class 11 IT Applications E Governance",
+  "file_name": "Class_11_IT_Applications_E_Governance.docx",
   "mcq_data": [
   {
-    "question": "Which of the following is a volatile memory in a computer system?",
-    "options": ["ROM", "RAM", "Hard Disk", "CD-ROM"],
+    "question": "What is the main purpose of E-Governance?",
+    "options": ["To increase paperwork", "To deliver government services electronically", "To monitor citizens", "To reduce internet usage"],
     "correct": 2,
-    "solution": "RAM is volatile memory because it loses data when power is turned off."
+    "solution": "E-Governance aims to deliver government services electronically using ICT for improved efficiency and transparency."
   },
   {
-    "question": "Which component of the CPU performs arithmetic and logical operations?",
-    "options": ["Control Unit", "Registers", "ALU", "Cache"],
+    "question": "Which of the following is an example of G2C (Government to Citizen) service?",
+    "options": ["GST Filing", "e-Tendering", "Aadhaar Services", "HRMS Portal"],
     "correct": 3,
-    "solution": "The ALU (Arithmetic Logic Unit) performs all arithmetic and logical operations inside the CPU."
+    "solution": "Aadhaar services are provided directly by the government to citizens, making it a G2C service."
   },
   {
-    "question": "Which of the following is an input device?",
-    "options": ["Monitor", "Printer", "OCR", "Plotter"],
-    "correct": 3,
-    "solution": "OCR (Optical Character Reader) is an input device that reads printed text and converts it into digital form."
-  },
-  {
-    "question": "Laser printers are classified as:",
-    "options": ["Impact printers", "Non-impact printers", "Dot matrix printers", "Line printers"],
-    "correct": 2,
-    "solution": "Laser printers are non-impact printers that use laser technology for high-quality printing."
-  },
-  {
-    "question": "Which of the following memory types is the fastest?",
-    "options": ["Cache", "RAM", "ROM", "Hard Disk"],
+    "question": "Which technology is MOST important for implementing E-Governance?",
+    "options": ["ICT (Information and Communication Technology)", "Manufacturing Technology", "Agriculture Tools", "Mechanical Devices"],
     "correct": 1,
-    "solution": "Cache memory is the fastest memory, located close to the CPU to speed up processing."
+    "solution": "E-Governance heavily depends on ICT to digitize and deliver government services."
   },
   {
-    "question": "Which of the following is NOT a function of the operating system?",
-    "options": ["Process management", "Memory management", "File management", "Designing hardware"],
+    "question": "Which of the following is NOT an objective of E-Governance?",
+    "options": ["Transparency", "Reducing corruption", "Faster service delivery", "Increasing manual paperwork"],
     "correct": 4,
-    "solution": "The operating system manages resources like processes, memory, and files, but it does not design hardware."
+    "solution": "E-Governance aims to reduce paperwork, not increase it."
   },
   {
-    "question": "Which language processor translates and executes a program line by line?",
-    "options": ["Compiler", "Assembler", "Interpreter", "Linker"],
+    "question": "UMANG App is an example of:",
+    "options": ["G2B Service", "G2G Service", "G2E Service", "G2C Service"],
+    "correct": 4,
+    "solution": "UMANG App provides multiple government services directly to citizens, so it is G2C."
+  },
+  {
+    "question": "Which of the following is an advantage of E-Governance?",
+    "options": ["More corruption", "Limited access to services", "24×7 availability of services", "More paperwork"],
     "correct": 3,
-    "solution": "An interpreter translates and executes code line by line, making debugging easier but slower."
+    "solution": "E-Governance provides services round the clock, improving availability."
   },
   {
-    "question": "Which utility software is used to rearrange fragmented files on a disk?",
-    "options": ["Antivirus", "Disk Defragmenter", "Compression Tool", "Task Manager"],
-    "correct": 2,
-    "solution": "Disk Defragmenter rearranges fragmented files so they are stored contiguously, improving access speed."
-  },
-  {
-    "question": "Which of the following is an example of open source software?",
-    "options": ["MS Office", "Linux", "Adobe Photoshop", "Oracle Database"],
-    "correct": 2,
-    "solution": "Linux is an open source operating system freely available for use and modification."
-  },
-  {
-    "question": "Which input method allows typing Indian language text using English phonetics?",
-    "options": ["Keymap based", "Unicode", "Phonetic typing", "TrueType Fonts"],
+    "question": "Which type of E-Governance involves communication between two government departments?",
+    "options": ["G2C", "G2B", "G2G", "G2E"],
     "correct": 3,
-    "solution": "Phonetic typing allows entering Indian language text by typing the equivalent English sounds."
+    "solution": "G2G (Government to Government) deals with interaction between government departments."
   },
   {
-    "question": "Which device is used in banks to read characters printed with magnetic ink?",
-    "options": ["OCR", "MICR", "BCR", "OMR"],
+    "question": "Digital Locker (DigiLocker) mainly helps in:",
+    "options": ["Storing physical documents", "Accessing digital documents securely", "Applying for a job", "Paying income tax"],
     "correct": 2,
-    "solution": "MICR (Magnetic Ink Character Reader) is used in banks for reading cheque details."
+    "solution": "DigiLocker allows citizens to store and access important documents digitally and securely."
   },
   {
-    "question": "Which of the following is an example of a non-impact printer?",
-    "options": ["Dot Matrix Printer", "Line Printer", "Laser Printer", "Drum Printer"],
-    "correct": 3,
-    "solution": "Laser printers are non-impact printers that use laser beams for printing."
-  },
-  {
-    "question": "Registers in CPU are used for:",
-    "options": ["Permanent storage", "Temporary high-speed storage", "Storing operating system", "Long-term backups"],
+    "question": "Which of the following is a challenge in implementing E-Governance?",
+    "options": ["High transparency", "Digital illiteracy", "Easy access", "Reduced cost"],
     "correct": 2,
-    "solution": "Registers provide temporary high-speed storage for instructions and data during processing."
+    "solution": "Digital illiteracy is a major challenge as many people still lack knowledge about using technology."
   },
   {
-    "question": "Which type of RAM needs to be refreshed continuously?",
-    "options": ["SRAM", "DRAM", "ROM", "PROM"],
-    "correct": 2,
-    "solution": "DRAM (Dynamic RAM) needs continuous refreshing to retain data."
-  },
-  {
-    "question": "Which type of ROM can be erased using ultraviolet light?",
-    "options": ["PROM", "EPROM", "EEPROM", "Flash ROM"],
-    "correct": 2,
-    "solution": "EPROM (Erasable Programmable Read Only Memory) can be erased with ultraviolet light."
-  },
-  {
-    "question": "Which of the following is an example of general purpose application software?",
-    "options": ["Payroll System", "MS Excel", "Reservation System", "Inventory Management System"],
-    "correct": 2,
-    "solution": "MS Excel is a general purpose spreadsheet software used in many fields."
-  },
-  {
-    "question": "Which of the following is NOT an example of utility software?",
-    "options": ["Antivirus", "Compiler", "Compression Tool", "Disk Defragmenter"],
-    "correct": 2,
-    "solution": "A compiler is a language processor, not a utility software."
-  },
-  {
-    "question": "Which of the following standards is used for representing Indian languages digitally?",
-    "options": ["ASCII", "Unicode", "HTML", "XML"],
-    "correct": 2,
-    "solution": "Unicode is a universal standard used to represent characters from multiple languages, including Indian languages."
-  },
-  {
-    "question": "Which port is used to transfer data one bit at a time?",
-    "options": ["Parallel Port", "USB Port", "Serial Port", "HDMI Port"],
-    "correct": 3,
-    "solution": "Serial ports transfer data one bit at a time, commonly used for modems and older mice."
-  },
-  {
-    "question": "Which of the following is an example of specific purpose application software?",
-    "options": ["Word Processor", "Presentation Software", "Payroll System", "Spreadsheet"],
-    "correct": 3,
-    "solution": "Payroll System is a specific purpose application software designed for salary management."
+    "question": "What does G2B stand for in E-Governance?",
+    "options": ["Government to Business", "Government to Bank", "General to Bureau", "Global to Business"],
+    "correct": 1,
+    "solution": "G2B stands for Government to Business, referring to online services offered to businesses such as licensing and taxation."
   }
 ]
 
