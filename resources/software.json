@@ -1,0 +1,116 @@
+{
+  "title": "Class 11 IT Applications E Governance",
+  "file_name": "Class_11_IT_Applications_E_Governance.docx",
+  "mcq_data": "mcq_data": [
+  {
+    "question": "What is software?",
+    "options": [
+      "Physical parts of a computer",
+      "Programs that control computer operations",
+      "Input devices",
+      "Output devices"
+    ],
+    "correct": 2,
+    "solution": "Software refers to a set of programs and instructions that tell the computer how to perform tasks."
+  },
+  {
+    "question": "Which of the following is an example of system software?",
+    "options": [
+      "MS Word",
+      "Google Chrome",
+      "Windows Operating System",
+      "PowerPoint"
+    ],
+    "correct": 3,
+    "solution": "Windows Operating System is system software because it controls and manages computer hardware."
+  },
+  {
+    "question": "Which software acts as an interface between user and hardware?",
+    "options": [
+      "Application software",
+      "Utility software",
+      "Operating system",
+      "Compiler"
+    ],
+    "correct": 3,
+    "solution": "The operating system acts as an interface between the user and the computer hardware."
+  },
+  {
+    "question": "Which of the following is NOT a type of system software?",
+    "options": [
+      "Operating System",
+      "Device Driver",
+      "Compiler",
+      "Spreadsheet software"
+    ],
+    "correct": 4,
+    "solution": "Spreadsheet software is application software, not system software."
+  },
+  {
+    "question": "What is the main function of an operating system?",
+    "options": [
+      "Creating documents",
+      "Managing computer resources",
+      "Browsing the internet",
+      "Playing games"
+    ],
+    "correct": 2,
+    "solution": "The operating system manages hardware resources such as CPU, memory, and input/output devices."
+  },
+  {
+    "question": "Which type of software is used to translate high-level language into machine language?",
+    "options": [
+      "Utility software",
+      "Application software",
+      "System software",
+      "Device driver"
+    ],
+    "correct": 3,
+    "solution": "Compilers and interpreters are system software used to translate programs into machine language."
+  },
+  {
+    "question": "Which software helps in maintaining and protecting the computer system?",
+    "options": [
+      "Application software",
+      "Utility software",
+      "Programming software",
+      "Operating system"
+    ],
+    "correct": 2,
+    "solution": "Utility software helps in system maintenance such as antivirus, disk cleanup, and backup."
+  },
+  {
+    "question": "MS Excel belongs to which category of software?",
+    "options": [
+      "System software",
+      "Utility software",
+      "Application software",
+      "Programming software"
+    ],
+    "correct": 3,
+    "solution": "MS Excel is application software used for spreadsheet and data analysis tasks."
+  },
+  {
+    "question": "Which of the following is a type of system software?",
+    "options": [
+      "Text editor",
+      "Media player",
+      "Device driver",
+      "Presentation software"
+    ],
+    "correct": 3,
+    "solution": "Device drivers are system software that allow hardware devices to communicate with the operating system."
+  },
+  {
+    "question": "System software is mainly responsible for:",
+    "options": [
+      "User-specific tasks",
+      "Running games",
+      "Managing hardware and system operations",
+      "Creating multimedia files"
+    ],
+    "correct": 3,
+    "solution": "System software controls hardware and manages overall system operations."
+  }
+]
+}
