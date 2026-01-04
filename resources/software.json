@@ -1,116 +1,116 @@
 {
-  "title": "Class 11 IT Applications E Governance",
-  "file_name": "Class_11_IT_Applications_E_Governance.docx",
+  "title": "Software",
+  "file_name": "Class_11_IT_Applications_Software.docx",
   "mcq_data": [
   {
-    "question": "What is software?",
+    "question": "What is open source software?",
     "options": [
-      "Physical parts of a computer",
-      "Programs that control computer operations",
-      "Input devices",
-      "Output devices"
+      "Software that is very expensive",
+      "Software whose source code is freely available",
+      "Software used only on the internet",
+      "Software owned by one company"
     ],
     "correct": 2,
-    "solution": "Software refers to a set of programs and instructions that tell the computer how to perform tasks."
+    "solution": "Open source software allows users to view, modify, and distribute its source code freely."
   },
   {
-    "question": "Which of the following is an example of system software?",
+    "question": "Which of the following is an example of open source software?",
     "options": [
-      "MS Word",
-      "Google Chrome",
-      "Windows Operating System",
-      "PowerPoint"
+      "Microsoft Windows",
+      "Adobe Photoshop",
+      "Linux",
+      "MS Word"
     ],
     "correct": 3,
-    "solution": "Windows Operating System is system software because it controls and manages computer hardware."
+    "solution": "Linux is an open source operating system whose source code is freely available."
   },
   {
-    "question": "Which software acts as an interface between user and hardware?",
+    "question": "What is one major benefit of open source software?",
     "options": [
-      "Application software",
-      "Utility software",
-      "Operating system",
-      "Compiler"
+      "High cost",
+      "Vendor lock-in",
+      "Transparency and flexibility",
+      "Limited access"
     ],
     "correct": 3,
-    "solution": "The operating system acts as an interface between the user and the computer hardware."
+    "solution": "Open source software provides transparency and allows users to modify the software as needed."
   },
   {
-    "question": "Which of the following is NOT a type of system software?",
+    "question": "What does OSI stand for?",
     "options": [
-      "Operating System",
-      "Device Driver",
-      "Compiler",
-      "Spreadsheet software"
+      "Open Software Internet",
+      "Operating System Interface",
+      "Open Source Initiative",
+      "Official Software Institute"
     ],
-    "correct": 4,
-    "solution": "Spreadsheet software is application software, not system software."
+    "correct": 3,
+    "solution": "OSI stands for Open Source Initiative, which promotes open source software."
   },
   {
-    "question": "What is the main function of an operating system?",
+    "question": "What is the main role of OSI?",
     "options": [
-      "Creating documents",
-      "Managing computer resources",
-      "Browsing the internet",
-      "Playing games"
+      "Develop operating systems",
+      "Sell open source software",
+      "Approve and promote open source licenses",
+      "Provide internet services"
+    ],
+    "correct": 3,
+    "solution": "OSI approves open source licenses and promotes open source standards."
+  },
+  {
+    "question": "What does GNU stand for?",
+    "options": [
+      "General Network Utility",
+      "GNU’s Not Unix",
+      "Global Network Unit",
+      "General Unix"
     ],
     "correct": 2,
-    "solution": "The operating system manages hardware resources such as CPU, memory, and input/output devices."
+    "solution": "GNU stands for GNU’s Not Unix, a free software project."
   },
   {
-    "question": "Which type of software is used to translate high-level language into machine language?",
+    "question": "Who started the GNU project?",
     "options": [
-      "Utility software",
-      "Application software",
-      "System software",
-      "Device driver"
+      "Bill Gates",
+      "Linus Torvalds",
+      "Richard Stallman",
+      "Steve Jobs"
     ],
     "correct": 3,
-    "solution": "Compilers and interpreters are system software used to translate programs into machine language."
+    "solution": "The GNU project was started by Richard Stallman to promote free software."
   },
   {
-    "question": "Which software helps in maintaining and protecting the computer system?",
+    "question": "What type of software is available free for trial use?",
     "options": [
-      "Application software",
-      "Utility software",
-      "Programming software",
-      "Operating system"
+      "Freeware",
+      "Open source software",
+      "Shareware",
+      "Proprietary software"
+    ],
+    "correct": 3,
+    "solution": "Shareware is software that is free for trial or limited use."
+  },
+  {
+    "question": "Which statement is true about freeware?",
+    "options": [
+      "Source code is available",
+      "Free for limited time only",
+      "Completely free but source code is closed",
+      "Always requires payment"
+    ],
+    "correct": 3,
+    "solution": "Freeware is free to use but its source code is not available."
+  },
+  {
+    "question": "What is localization in software?",
+    "options": [
+      "Fixing software bugs",
+      "Adapting software for local language and culture",
+      "Updating software versions",
+      "Installing software"
     ],
     "correct": 2,
-    "solution": "Utility software helps in system maintenance such as antivirus, disk cleanup, and backup."
-  },
-  {
-    "question": "MS Excel belongs to which category of software?",
-    "options": [
-      "System software",
-      "Utility software",
-      "Application software",
-      "Programming software"
-    ],
-    "correct": 3,
-    "solution": "MS Excel is application software used for spreadsheet and data analysis tasks."
-  },
-  {
-    "question": "Which of the following is a type of system software?",
-    "options": [
-      "Text editor",
-      "Media player",
-      "Device driver",
-      "Presentation software"
-    ],
-    "correct": 3,
-    "solution": "Device drivers are system software that allow hardware devices to communicate with the operating system."
-  },
-  {
-    "question": "System software is mainly responsible for:",
-    "options": [
-      "User-specific tasks",
-      "Running games",
-      "Managing hardware and system operations",
-      "Creating multimedia files"
-    ],
-    "correct": 3,
-    "solution": "System software controls hardware and manages overall system operations."
+    "solution": "Localization adapts software to local languages, currency, and regional settings."
   }
 ]
 }
