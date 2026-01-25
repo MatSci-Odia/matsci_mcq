@@ -2,27 +2,217 @@
   "title": "Class_11_Tests",
   "file_name": "Class_11_Tests.docx",
   "mcq_data": [
-    {
-      "question": "Which is a valid loop in Java?",
-      "options": [
-        "if",
-        "while",
-        "case",
-        "goto"
-      ],
-      "correct": 2,
-      "solution": "while is used to loop in Java."
-    },
-    {
-      "question": "What is the output of 2+2?",
-      "options": [
-        "3",
-        "4",
-        "5",
-        "22"
-      ],
-      "correct": 2,
-      "solution": "2 + 2 = 4"
-    }
-  ]
+  {
+    "question": "The two broad categories of software are __________.",
+    "options": [
+      "Word processing and spreadsheet",
+      "Transaction and application",
+      "Windows and Mac OS",
+      "System and application"
+    ],
+    "correct": 4,
+    "solution": "Software is broadly classified into system software and application software."
+  },
+  {
+    "question": "Word processing, spreadsheet and photo-editing are examples of __________.",
+    "options": [
+      "Application software",
+      "System software",
+      "Operating system software",
+      "Platform software"
+    ],
+    "correct": 1,
+    "solution": "These programs are designed to perform user-specific tasks, hence they are application software."
+  },
+  {
+    "question": "__________ is a set of computer programs used on a computer to help perform tasks.",
+    "options": [
+      "An instruction",
+      "Software",
+      "Memory",
+      "A processor"
+    ],
+    "correct": 2,
+    "solution": "Software is a collection of programs that instruct a computer to perform tasks."
+  },
+  {
+    "question": "Linux is an __________ operating system.",
+    "options": [
+      "Open-source",
+      "Microsoft",
+      "Windows",
+      "Mac",
+      "None of these"
+    ],
+    "correct": 1,
+    "solution": "Linux is an open-source operating system whose source code is freely available."
+  },
+  {
+    "question": "An __________ uses pictures (called icons) and menus displayed on the screen to send commands to the computer system.",
+    "options": [
+      "Command-based user interface",
+      "GUI",
+      "System utility",
+      "API",
+      "None of these"
+    ],
+    "correct": 2,
+    "solution": "GUI (Graphical User Interface) allows users to interact using icons and menus."
+  },
+  {
+    "question": "Which of the following statement is wrong?",
+    "options": [
+      "Windows XP is an operating system",
+      "Linux is owned and sold by Microsoft",
+      "Photoshop is a graphical design tool by Adobe",
+      "Linux is free and open source software"
+    ],
+    "correct": 2,
+    "solution": "Linux is not owned or sold by Microsoft; it is open source."
+  },
+  {
+    "question": "Software such as viruses, worms and Trojan horses that has a malicious intent is known as __________.",
+    "options": [
+      "Spyware",
+      "Adware",
+      "Spam",
+      "Malware",
+      "None of these"
+    ],
+    "correct": 4,
+    "solution": "Malware is software designed to harm or exploit computer systems."
+  },
+  {
+    "question": "__________ are viruses that are triggered by the passage of time or on a certain date.",
+    "options": [
+      "Boot-sector viruses",
+      "Macro viruses",
+      "Time bombs",
+      "Worms"
+    ],
+    "correct": 3,
+    "solution": "Time bombs activate on a specific date or time."
+  },
+  {
+    "question": "Operating system of a computer __________.",
+    "options": [
+      "Enables the programmer to draw a flow chart",
+      "Links a program with subroutine with references",
+      "Provides a layer, user friendly interface",
+      "None of these"
+    ],
+    "correct": 3,
+    "solution": "The operating system provides a user-friendly interface between user and hardware."
+  },
+  {
+    "question": "The term 'Operating System' means __________.",
+    "options": [
+      "A set of programs which control computer working",
+      "The way a user operates the computer system",
+      "Conversion of high level language to machine language",
+      "The way computer operator works"
+    ],
+    "correct": 1,
+    "solution": "An operating system controls and manages the overall functioning of a computer."
+  },
+  {
+    "question": "The startup routine that runs when a machine boots up is known as __________.",
+    "options": [
+      "POST",
+      "Boot Up",
+      "Operating Routine",
+      "I/O Operation"
+    ],
+    "correct": 1,
+    "solution": "POST (Power-On Self Test) runs when the computer starts."
+  },
+  {
+    "question": "Operating system is also known as __________.",
+    "options": [
+      "Database",
+      "System software",
+      "Hardware",
+      "Printer"
+    ],
+    "correct": 2,
+    "solution": "An operating system is classified as system software."
+  },
+  {
+    "question": "Which statement is valid about interpreter?",
+    "options": [
+      "It translates one instruction at a time",
+      "Object code is saved for future use",
+      "Repeated interpretation is not necessary",
+      "All of these"
+    ],
+    "correct": 1,
+    "solution": "An interpreter translates and executes one instruction at a time."
+  },
+  {
+    "question": "What is a compiler?",
+    "options": [
+      "A compiler does a conversion line by line as the program is run",
+      "A compiler converts the whole of a higher level program code into machine code in one step",
+      "A compiler is a general purpose language providing very efficient execution",
+      "None of these"
+    ],
+    "correct": 2,
+    "solution": "A compiler translates the entire program into machine code at once."
+  },
+  {
+    "question": "Which of the following is not an operating system?",
+    "options": [
+      "DOS",
+      "Linux",
+      "Windows",
+      "Oracle"
+    ],
+    "correct": 4,
+    "solution": "Oracle is a database software, not an operating system."
+  },
+  {
+    "question": "Linux is a(n) __________ operating system.",
+    "options": [
+      "Open source",
+      "Microsoft",
+      "Windows",
+      "Mac"
+    ],
+    "correct": 1,
+    "solution": "Linux is an open-source operating system."
+  },
+  {
+    "question": "Which of the following is not a multitasking operating system?",
+    "options": [
+      "Windows",
+      "Linux",
+      "Win NT",
+      "DOS"
+    ],
+    "correct": 4,
+    "solution": "DOS does not support multitasking."
+  },
+  {
+    "question": "Which of the following is system software?",
+    "options": [
+      "Operating system",
+      "Compiler",
+      "Utilities",
+      "All of these"
+    ],
+    "correct": 4,
+    "solution": "Operating systems, compilers, and utilities are all system software."
+  },
+  {
+    "question": "The primary purpose of an operating system is __________.",
+    "options": [
+      "To make the most efficient use of the computer hardware",
+      "To allow people to use the computer",
+      "To keep systems programmers employed",
+      "To make computers easier to use"
+    ],
+    "correct": 1,
+    "solution": "The main goal of an operating system is efficient utilization of hardware resources."
+  }
+]
 }
